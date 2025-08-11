@@ -25,26 +25,28 @@ const NavbarProvider = ({ children }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Pastikan saat scroll, jika menu terbuka, otomatis tutup
+  useEffect(() => {
+    if (isScroll && menuOpen) {
+      setMenuOpen(false);
+    }
+  }, [isScroll]);
+
   // function add hamburger active
   const toggleHamburger = useCallback(() => {
     if (hamburgerRef.current) {
-      hamburgerRef.current.classList.toggle("hamburger-active");
-    }
-    setMenuOpen((prev) => !prev);
-  }, []);
-
-  useEffect(() => {
-    const button = hamburgerRef.current;
-    if (button) {
-      button.addEventListener("click", toggleHamburger);
-    }
-
-    return () => {
-      if (button) {
-        button.removeEventListener("click", toggleHamburger);
+      // hamburgerRef.current.classList.toggle("hamburger-active");
+      if (menuOpen) {
+        hamburgerRef.current.classList.add("hamburger-active");
+      } else {
+        hamburgerRef.current.classList.remove("hamburger-active");
       }
-    };
-  }, [toggleHamburger]);
+    }
+    setMenuOpen((prev) => {
+      const newState = !prev;
+      return newState;
+    });
+  }, []);
 
   // function handle click outside sidenav
   UseClickOutside(menuRef, (event) => {

@@ -27,8 +27,10 @@ const Navbar = () => {
         {/* Hamburger menu -- hidden saat display lg */}
         <button
           ref={hamburgerRef}
-          onClick={toggleHamburger()}
-          className="lg:hidden space-y-2 "
+          onClick={toggleHamburger}
+          className={`lg:hidden space-y-2 hamburger ${
+            menuOpen ? "hamburger-active" : ""
+          } `}
         >
           <span className="my-hamburger-line transition origin-top-left duration-300 ease-in"></span>
           <span className="my-hamburger-line transition delay-300 ease-in"></span>
@@ -80,7 +82,7 @@ const Navbar = () => {
       <div
         ref={menuRef}
         className={`absolute top-full right-4 w-64 px-2 py-6 transform ${
-          menuOpen ? "-translate-x-0" : "translate-x-100"
+          menuOpen ? "translate-x-0" : "translate-x-80"
         } bg-white rounded-xl shadow-md dark:bg-slate-800 dark:shadow-gray-60 transition-transform duration-300 lg:hidden`}
       >
         <nav className="flex flex-col space-y-6 px-2 ">
