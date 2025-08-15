@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import socialImage1 from "../../assets/github-dark.svg";
 import socialImage2 from "../../assets/linkedin-dark.svg";
 import socialImage3 from "../../assets/whatsapp-dark.svg";
+import CV from "../../../public/CV_Ahmad_Pijar_Maulana.pdf";
 
 const Home = () => {
   return (
@@ -9,18 +10,25 @@ const Home = () => {
       id="home"
       className={`home w-full min-h-screen flex items-center justify-center relative`}
     >
-      <div className="flex flex-col flex-wrap items-center justify-center w-full px-3 md:text-center">
+      <div className="flex flex-col flex-wrap items-center justify-center w-[50rem] px-3">
         <h1 className="my-hero-heading">Ahmad Pijar Maulana</h1>
-        <p className="text-info dark:text-gray-300 self-start mb-10 md:self-center md:text-xl">
-          Front-end Web Developer
+        <p className="text-info dark:text-gray-300 self-start mb-15 md:self-center md:text-xl">
+          Job Seeker
         </p>
-        <p className="my-info text-justify md:text-center md:w-[43rem]">
-          In this website you will find what i can do as a web developer,
-          Checkout my project website if you want to see more interesthing
-          websites that i already made.
+        <p className="my-info text-justify">
+          Welcome to my portfolio! Here, you'll discover examples of my work,
+          including projects and certifications. I’m passionate about continuous
+          learning and growth, so this space will regularly feature new
+          creations and achievements. Feel free to explore and get to know more
+          about my journey and capabilities.
         </p>
-        <a href="" className="my-button my-4 rounded-md ">
-          Projects
+        <a
+          href={CV}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="my-button rounded-md self-start"
+        >
+          Download CV
         </a>
       </div>
       <div className="social absolute top-[50%] left-0 translate-y-[-50%] bg-white dark:bg-gray-700 shadow-xl inset-ring-1 inset-ring-gray-400 dark:inset-ring-gray-600 rounded-md py-2 px-1 hidden md:block">

@@ -73,7 +73,7 @@ html {
     }
   }
   .my-button {
-    @apply text-base text-white font-semibold bg-blue-600 rounded-md px-7 py-1 md:text-2xl;
+    @apply text-base text-white font-semibold bg-blue-500 rounded-md px-5 py-1 md:text-xl;
     @variant hover {
       background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
     }
