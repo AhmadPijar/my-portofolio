@@ -18,7 +18,7 @@ const Project = () => {
         {contentData.map((content) => (
           <div
             key={content.id}
-            className="content sticky top-20 flex items-start"
+            className="content sticky top-20 flex items-start h-screen"
           >
             <div className="w-full flex flex-col md:gap-4 overflow-hidden bg-white shadow-lg rounded-lg md:flex-row border border-gray-300 dark:bg-gray-800 dark:border-gray-600">
               {/* image section */}

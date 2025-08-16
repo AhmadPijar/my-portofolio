@@ -150,13 +150,15 @@ const aboutProjectPopover = [
     id: 1,
     popover: "project-1",
     title: "Portfolio Website",
-    description: "",
+    description:
+      "Portfolio Website is a dynamically designed platform built with React and Tailwind CSS, powered by Vite. It serves as both a personal introduction and professional showcase, featuring skills, projects, contact, and a downloadable CV. This site highlights a broad range of my abilities — presented through interactive components and a clean responsive design. The site reflects not only what I’ve done, but also my dedication to continuous learning and adaptable growth.",
   },
   {
     id: 2,
     popover: "Project-2",
     title: "Inventory App Excel Based",
-    description: "",
+    description:
+      "Inventory Management App is a macro-enabled Excel tool built with VBA to track warehouse operations. It automates the recording of inbound and outbound transactions, dynamically calculates stock balances, and generates reports at the click of a button. Designed for small businesses or teams without access to advanced ERP systems, this project highlights my ability to combine administrative experience with technical problem-solving — delivering practical, user-friendly solutions.",
   },
 ];
 
