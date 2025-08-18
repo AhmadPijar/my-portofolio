@@ -58,7 +58,8 @@ const aboutSkillPopover = [
     sub2_description:
       "Skilled in creating documents such as reports, letters, and CVs with proper structure, formatting, and styling to meet business and professional needs.",
     sub3: "Microsoft PowerPoint",
-    sub3_description: "on learning...",
+    sub3_description:
+      "Experienced in designing clear, engaging, and visually appealing presentations for training, and project app.",
   },
   {
     id: 2,

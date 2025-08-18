@@ -64,9 +64,7 @@ const About = () => {
           <h3 className="my-heading-2">Skills and Project</h3>
           <div className="px-3 md:px-5 ">
             <div className="skill-set space-x-2 space-y-2 ">
-              <p className="text-head text-xl leading-relaxed font-semibold">
-                My Skills
-              </p>
+              <p className="my-sub-heading">My Skills</p>
               {aboutSkill.map((skill) => (
                 <button
                   onClick={() => {
@@ -80,9 +78,7 @@ const About = () => {
               ))}
             </div>
             <div className="project-set space-x-2 space-y-2 0">
-              <p className="text-head text-xl leading-relaxed font-semibold">
-                My Projects
-              </p>
+              <p className="my-sub-heading">My Projects</p>
               {aboutProject.map((project) => (
                 <button
                   onClick={() => {
@@ -109,11 +105,11 @@ const About = () => {
                `}
                   >
                     <div className="text-justify">
-                      <h5 className="text-xl text-center text-head font-semibold dark:text-gray-50">
+                      <h5 className="text-3xl text-center text-head font-semibold dark:text-gray-50">
                         {popover.title}
                       </h5>
                       <div className="mt-5 space-y-1">
-                        <p className="text-sm text-gray-500 dark:text-gray-200">
+                        <p className="text-sm text-gray-800 dark:text-gray-200">
                           {popover.description}
                         </p>
                         <a
@@ -125,38 +121,30 @@ const About = () => {
                           <img
                             src={popover.image}
                             alt=""
-                            className="mt-5 border border-gray-300 shadow-2xl"
+                            className="mt-5 border border-gray-300 dark:border-gray-200 shadow-slate-500 shadow-2xl dark:shadow-none"
                           />
                         </a>
                         <div>
-                          <h6 className="text-base text-head ">
-                            {popover.sub1}
-                          </h6>
-                          <p className="text-sm text-gray-500 dark:text-gray-200">
+                          <h6 className="my-sub-heading">{popover.sub1}</h6>
+                          <p className="text-sm text-gray-800 dark:text-gray-200">
                             {popover.sub1_description}
                           </p>
                         </div>
                         <div>
-                          <h6 className="text-base text-head ">
-                            {popover.sub2}
-                          </h6>
-                          <p className="text-sm text-gray-500 dark:text-gray-200">
+                          <h6 className="my-sub-heading">{popover.sub2}</h6>
+                          <p className="text-sm text-gray-800 dark:text-gray-200">
                             {popover.sub2_description}
                           </p>
                         </div>
                         <div>
-                          <h6 className="text-base text-head ">
-                            {popover.sub3}
-                          </h6>
-                          <p className="text-sm text-gray-500 dark:text-gray-200">
+                          <h6 className="my-sub-heading">{popover.sub3}</h6>
+                          <p className="text-sm text-gray-800 dark:text-gray-200">
                             {popover.sub3_description}
                           </p>
                         </div>
                         <div>
-                          <h6 className="text-base text-head ">
-                            {popover.sub4}
-                          </h6>
-                          <p className="text-sm text-gray-500 dark:text-gray-200">
+                          <h6 className="my-sub-heading">{popover.sub4}</h6>
+                          <p className="text-sm text-gray-800 dark:text-gray-200">
                             {popover.sub4_description}
                           </p>
                         </div>
@@ -190,7 +178,7 @@ const About = () => {
                         {popover.title}
                       </h5>
                       <div className="mt-5 space-y-1">
-                        <p className="text-sm text-gray-500 dark:text-gray-200">
+                        <p className="text-sm text-gray-800 dark:text-gray-200">
                           {popover.description}
                         </p>
                       </div>
