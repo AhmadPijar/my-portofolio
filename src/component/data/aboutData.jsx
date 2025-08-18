@@ -1,4 +1,8 @@
-import englishCert from "../../../public/englishCertificate.png";
+import englishCert1 from "../../../public/englishCertificate.png";
+import englishCert2 from "../../../public/toefl-certification.png";
+import logisticsCert from "../../../public/toyotaBnspCert.png";
+import programmingCert from "../../../public/dicodingCert.png";
+import ProgrammingLink from "../../../public/dicoding-certification.pdf";
 
 const aboutSkill = [
   {
@@ -26,23 +30,23 @@ const aboutSkill = [
     title: "Electro",
     popoverTarget: "skill-5",
   },
-  {
-    id: 6,
-    title: "English",
-    popoverTarget: "skill-6",
-  },
 ];
 
-const aboutProject = [
+const aboutCertification = [
   {
     id: 1,
-    title: "Portfolio Website",
-    popoverTarget: "project-1",
+    title: "English",
+    popoverTarget: "cert-1",
   },
   {
     id: 2,
-    title: "Inventory App",
-    popoverTarget: "project-2",
+    title: "Logistics",
+    popoverTarget: "cert-2",
+  },
+  {
+    id: 3,
+    title: "Programming",
+    popoverTarget: "cert-3",
   },
 ];
 
@@ -72,7 +76,7 @@ const aboutSkillPopover = [
     sub2_description:
       "Skilled in writing, formatting, and collaborating on professional documents, ensuring accuracy and readability for team and business use.",
     sub3: "Google Slides",
-    sub3_description: "on learning...",
+    sub3_description: "on progress....",
   },
   {
     id: 3,
@@ -119,48 +123,87 @@ const aboutSkillPopover = [
     sub3_description:
       "Able to install residential and small building electrical systems, including MCB grouping for safety and efficiency.",
   },
+];
+
+const aboutCertificationPopover = [
   {
-    id: 6,
-    popover: "skill-6",
+    id: 1,
+    popover: "cert-1",
     title: "English Profeciency",
+    sub1: "EF SET",
     description: (
       <>
-        I hold an{" "}
+        I hold an English Certificate at the B2 Upper-Intermediate level from{" "}
         <a
           href="https://www.efset.org/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 underline font-semibold"
+          className="text-blue-500 underline font-bold"
         >
           EF SET
         </a>{" "}
-        English Certificate at the B2 Upper-Intermediate level, which I display
-        below for reference. While I still face challenges in producing spoken
-        English during real-time conversations — as most of my learning has come
-        through self-study — I have solid skills in reading, writing, and
-        understanding English. I continue practicing to improve my fluency and
-        confidence in professional communication.
+        ,and another English Certificate from{" "}
+        <a
+          href="https://www.elskill.id/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline font-bold"
+        >
+          ELSKILL
+        </a>{" "}
+        which I display below for reference. While I still face challenges in
+        producing spoken English during real-time conversations — as most of my
+        learning has come through self-study — I have solid skills in reading,
+        writing, and understanding English. I continue practicing to improve my
+        fluency and confidence in professional communication.
       </>
     ),
-    image: englishCert,
-  },
-];
-
-const aboutProjectPopover = [
-  {
-    id: 1,
-    popover: "project-1",
-    title: "Portfolio Website",
-    description:
-      "Portfolio Website is a dynamically designed platform built with React and Tailwind CSS, powered by Vite. It serves as both a personal introduction and professional showcase, featuring skills, projects, contact, and a downloadable CV. This site highlights a broad range of my abilities — presented through interactive components and a clean responsive design. The site reflects not only what I’ve done, but also my dedication to continuous learning and adaptable growth.",
+    linkSub1: "https://cert.efset.org/en/XxHmUK",
+    image1: englishCert1,
+    sub2: "TOEFL",
+    image2: englishCert2,
   },
   {
     id: 2,
-    popover: "Project-2",
-    title: "Inventory App Excel Based",
+    popover: "cert-2",
+    title: "Logistics Certification",
     description:
-      "Inventory Management App is a macro-enabled Excel tool built with VBA to track warehouse operations. It automates the recording of inbound and outbound transactions, dynamically calculates stock balances, and generates reports at the click of a button. Designed for small businesses or teams without access to advanced ERP systems, this project highlights my ability to combine administrative experience with technical problem-solving — delivering practical, user-friendly solutions.",
+      "I hold a BNSP Certificate of Competence in the field of Automotive Manufacturing Logistic Shop, issued by the Indonesian Professional Certification Authority in collaboration with Toyota Motor Manufacturing Indonesia (LSP TMMIN). My qualification is as a Logistics Operator for Outbound Goods Packaging Process Rank C, which certifies my competency in handling outbound logistics and packaging processes. This certificate is valid for three years (2023–2026) and is displayed below for reference.",
+    image: logisticsCert,
+  },
+  {
+    id: 3,
+    popover: "cert-3",
+    title: "Programming Certification",
+    link: "https://www.dicoding.com/certificates/NVP718LWGPR0",
+    description: (
+      <>
+        "I earned a Dicoding Certificate for completing the Belajar Dasar
+        Pemrograman JavaScript (Basic JavaScript Programming) course in August
+        2021, verified by{" "}
+        <a
+          href="https://www.dicoding.com/certificates/NVP718LWGPR0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 underline font-bold"
+        >
+          Dicoding Academy
+        </a>{" "}
+        . This course, designed with industry standards validated by AWS,
+        covered JavaScript fundamentals, data structures, functions,
+        object-oriented programming, functional programming, asynchronous
+        processes, and automated testing. The training required around 45 hours
+        of learning and practice, equipping me with a solid foundation in
+        JavaScript for web and backend development.",
+      </>
+    ),
+    image: programmingCert,
   },
 ];
 
-export { aboutSkill, aboutProject, aboutSkillPopover, aboutProjectPopover };
+export {
+  aboutSkill,
+  aboutCertification,
+  aboutSkillPopover,
+  aboutCertificationPopover,
+};

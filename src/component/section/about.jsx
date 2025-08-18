@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   aboutSkill,
-  aboutProject,
+  aboutCertification,
   aboutSkillPopover,
-  aboutProjectPopover,
+  aboutCertificationPopover,
 } from "../data/aboutData";
 import { UseClickOutside } from "../../hook/UseClickOutside";
 
@@ -61,7 +61,7 @@ const About = () => {
           </button>
         </div>
         <div className="about-right w-full h-full md:w-1/2">
-          <h3 className="my-heading-2">Skills and Project</h3>
+          <h3 className="my-heading-2">Skills and Certifications</h3>
           <div className="px-3 md:px-5 ">
             <div className="skill-set space-x-2 space-y-2 ">
               <p className="my-sub-heading">My Skills</p>
@@ -78,16 +78,16 @@ const About = () => {
               ))}
             </div>
             <div className="project-set space-x-2 space-y-2 0">
-              <p className="my-sub-heading">My Projects</p>
-              {aboutProject.map((project) => (
+              <p className="my-sub-heading">My Certification</p>
+              {aboutCertification.map((cert) => (
                 <button
                   onClick={() => {
-                    setIsOpen({ type: "project", id: project.id });
+                    setIsOpen({ type: "cert", id: cert.id });
                   }}
-                  key={project.id}
+                  key={cert.id}
                   className="my-button-skill cursor-pointer"
                 >
-                  {project.title}
+                  {cert.title}
                 </button>
               ))}
             </div>
@@ -112,18 +112,6 @@ const About = () => {
                         <p className="text-sm text-gray-800 dark:text-gray-200">
                           {popover.description}
                         </p>
-                        <a
-                          href="https://cert.efset.org/en/XxHmUK"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="cursor-pointer"
-                        >
-                          <img
-                            src={popover.image}
-                            alt=""
-                            className="mt-5 border border-gray-300 dark:border-gray-200 shadow-slate-500 shadow-2xl dark:shadow-none"
-                          />
-                        </a>
                         <div>
                           <h6 className="my-sub-heading">{popover.sub1}</h6>
                           <p className="text-sm text-gray-800 dark:text-gray-200">
@@ -160,13 +148,13 @@ const About = () => {
                 </div>
               ) : null
             )}
-            {aboutProjectPopover.map((popover) =>
-              isOpen.type === "project" && isOpen.id === popover.id ? (
+            {aboutCertificationPopover.map((popover) =>
+              isOpen.type === "cert" && isOpen.id === popover.id ? (
                 <div className="filter fixed top-0 left-0 min-w-[100vw] min-h-[100vh] bg-black/50 z-50">
                   <div
                     ref={popoverRef}
                     key={popover.id}
-                    class={`w-1/2 fixed top-[50%] translate-y-[-50%] left-[50%] translate-x-[-52%] transform overflow-hidden rounded-lg  bg-white px-4 pt-5 pb-4 text-left shadow-xl inset-ring-1 inset-ring-slate-400 overflow-y-auto dark:bg-gray-900 transition duration-300 z-10 relative${
+                    class={`w-[94%] md:w-1/2 max-h-1/2 fixed top-[50%] translate-y-[-50%] left-[50%] translate-x-[-52%] transform overflow-hidden rounded-lg  bg-white px-4 pt-5 pb-4 text-left shadow-xl inset-ring-1 inset-ring-slate-400 overflow-y-auto dark:bg-gray-900 transition duration-300 z-10 relative${
                       popover.id
                         ? "scale-100 opacity-100"
                         : "scale-0 opacity-0 pointer-events-none"
@@ -177,10 +165,47 @@ const About = () => {
                       <h5 className="text-xl text-center text-head font-semibold dark:text-gray-50">
                         {popover.title}
                       </h5>
-                      <div className="mt-5 space-y-1">
+                      <div className="mt-5 space-y-1 flex flex-col items-center">
                         <p className="text-sm text-gray-800 dark:text-gray-200">
                           {popover.description}
                         </p>
+                        <a
+                          href={popover.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="cursor-pointer"
+                        >
+                          <img
+                            src={popover.image}
+                            alt=""
+                            className="mt-5 border border-gray-300 dark:border-gray-200 shadow-slate-500 shadow-2xl dark:shadow-none"
+                          />
+                        </a>
+                        <div>
+                          <h6 className="my-sub-heading">{popover.sub1}</h6>
+                          <a
+                            href={popover.linkSub1}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="cursor-pointer"
+                          >
+                            <img
+                              src={popover.image1}
+                              alt=""
+                              className="mt-5 border border-gray-300 dark:border-gray-200 shadow-slate-500 shadow-2xl dark:shadow-none"
+                            />
+                          </a>
+                        </div>
+                        <div>
+                          <h6 className="my-sub-heading mt-20">
+                            {popover.sub2}
+                          </h6>
+                          <img
+                            src={popover.image2}
+                            alt=""
+                            className="mt-5 border border-gray-300 dark:border-gray-200 shadow-slate-500 shadow-2xl dark:shadow-none"
+                          />
+                        </div>
                       </div>
                       <button
                         onClick={() => setIsOpen({ type: null, id: null })}
