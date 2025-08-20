@@ -27,7 +27,7 @@ const aboutSkill = [
   },
   {
     id: 5,
-    title: "Electro",
+    title: "Electrical",
     popoverTarget: "skill-5",
   },
 ];

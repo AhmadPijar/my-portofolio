@@ -22,14 +22,20 @@ const Home = () => {
           creations and achievements. Feel free to explore and get to know more
           about my journey and capabilities.
         </p>
-        <a
-          href={CV}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="my-button rounded-md self-start"
-        >
-          Download CV
-        </a>
+        <div className="w-full flex flex-row space-x-4 my-info">
+          <a href="#project" className="my-button rounded-md">
+            See my Project
+          </a>
+          <h1>or</h1>
+          <a
+            href={CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="my-button rounded-md"
+          >
+            Download my CV
+          </a>
+        </div>
       </div>
       <div className="social absolute top-[50%] left-0 translate-y-[-50%] bg-white dark:bg-gray-700 shadow-xl inset-ring-1 inset-ring-gray-400 dark:inset-ring-gray-600 rounded-md py-2 px-1 hidden md:block">
         <div className="flex flex-col items-center justify-center w-[2.7rem]">
