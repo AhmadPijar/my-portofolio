@@ -28,7 +28,7 @@ const Home = () => {
           </a>
           <h1>or</h1>
           <a
-            href={CV}
+            href="https://drive.google.com/file/d/1O_nE2o03LsG9_EYpk9hIDTtW9efspyWU/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="my-button rounded-md"
