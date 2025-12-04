@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import socialImage1 from "../../assets/github-dark.svg";
 import socialImage2 from "../../assets/linkedin-dark.svg";
 import socialImage3 from "../../assets/whatsapp-dark.svg";
-import CV from "../../../public/CV_Ahmad_Pijar_Maulana.pdf";
 
 const Home = () => {
   return (

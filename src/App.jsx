@@ -9,6 +9,7 @@ import Project from "./component/section/project";
 import Contact from "./component/section/contact";
 import Footer from "./component/section/footer";
 import ErrorBoundary from "./component/errorBoundary";
+import Design from "./component/design";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         </NavbarProvider>
       </ThemeProvider>
     </ErrorBoundary>
+    // <Design />
   );
 };
 
