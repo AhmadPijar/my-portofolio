@@ -21,7 +21,7 @@ export const roadmapData = [
   },
   {
     year: "Octo 2025 - Octo 2025",
-    title: "Production Operatoe",
+    title: "Production Operator",
     desc: "PT SINAR MASKING LESTARI - Bekasi",
     details: [
       "Assembled product components",

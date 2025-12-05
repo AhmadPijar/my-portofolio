@@ -3,7 +3,7 @@ export const projectsData = [
     title: "Dashboard Kas",
     category: "Web app",
     stack: "Appscript, Spreadsheets",
-    desc: "",
+    desc: "This is a web app dashboard project created using Google Apps Script and Google Sheets as its database. The system is designed to help manage petty cash more quickly, neatly, and easily without the need for time-consuming manual processes.",
     link: "https://sites.google.com/view/projectdashboardkas/halaman-muka",
   },
   {

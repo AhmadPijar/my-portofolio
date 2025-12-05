@@ -2,7 +2,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 body,
 html {
-  @apply scroll-smooth transition-all duration-300;
+  @apply scroll-smooth transition-all duration-300 bg-slate-50 text-slate-800;
 }
 @theme {
   --color-primary: #b927fc;
