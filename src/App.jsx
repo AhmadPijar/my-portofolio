@@ -1,33 +1,36 @@
-import React from "react";
-import Navbar from "./component/section/navbar";
-import NavbarProvider from "./context/NavbarContext";
-import DarkMode from "./component/DarkMode";
-import ThemeProvider from "./context/ThemeContext";
-import Home from "./component/section/home";
-import About from "./component/section/about";
-import Project from "./component/section/project";
-import Contact from "./component/section/contact";
-import Footer from "./component/section/footer";
-import ErrorBoundary from "./component/errorBoundary";
-import Design from "./component/design";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const App = () => {
+// Layout
+import { Navbar, Footer } from "./newComponent";
+
+// Pages/Sections
+import {
+  HomeSection,
+  AboutSection,
+  ProjectsSection,
+  ContactSection,
+} from "./newSection";
+import { NavbarProvider } from "./newContext";
+
+function App() {
   return (
-    <ErrorBoundary>
-      <ThemeProvider>
-        <NavbarProvider>
-          <Navbar />
-          <DarkMode />
-          <Home />
-          <About />
-          <Project />
-          <Contact />
-          <Footer />
-        </NavbarProvider>
-      </ThemeProvider>
-    </ErrorBoundary>
-    // <Design />
+    <NavbarProvider>
+      <BrowserRouter basename="/my-portofolio">
+        <Navbar />
+
+        <main className="pt-24 px-6 max-w-6xl mx-auto">
+          <Routes>
+            <Route path="/" element={<HomeSection />} />
+            <Route path="/about" element={<AboutSection />} />
+            <Route path="/projects" element={<ProjectsSection />} />
+            <Route path="/contact" element={<ContactSection />} />
+          </Routes>
+        </main>
+
+        <Footer />
+      </BrowserRouter>
+    </NavbarProvider>
   );
-};
+}
 
 export default App;
