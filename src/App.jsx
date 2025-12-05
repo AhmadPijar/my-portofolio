@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 // Layout
 import { Navbar, Footer } from "./newComponent";
@@ -15,7 +15,7 @@ import { NavbarProvider } from "./newContext";
 function App() {
   return (
     <NavbarProvider>
-      <BrowserRouter basename="/my-portofolio">
+      <HashRouter>
         <Navbar />
 
         <main className="pt-24 px-6 max-w-6xl mx-auto">
@@ -28,7 +28,7 @@ function App() {
         </main>
 
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </NavbarProvider>
   );
 }
