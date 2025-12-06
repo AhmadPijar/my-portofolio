@@ -6,7 +6,7 @@ const ContactSection = () => {
   const [loading, setLoading] = useState(false);
 
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxb0qGEUtA-BdQD20RKHWOG0QWnNniAf8JqEFkNyPGvOlg1oJW52gzqmqV_jhpTb8yGKQ/exec";
+    "https://script.google.com/macros/s/AKfycbylqMLTAYp7u1UH0fCTQFzz9vmVN7kSES-RtJsCbKFJZ15h1Vd-FwoeksPT2tNibZ5Dhg/exec";
 
   // 🔥 Validasi Input
   const validateForm = (data) => {
