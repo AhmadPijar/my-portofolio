@@ -1,22 +1,26 @@
 export const skillsGroups = [
   {
-    title: "Office & Administration",
+    title: "Administrative & Office Skills",
     skills: [
-      "Administrative support and handling incoming/outgoing correspondence",
-      "Filing, document management, and archiving both digital and physical records",
-      "Data entry, data processing, and updating administrative forms",
-      "Creating, maintaining, and organizing spreadsheets",
-      "Inventory data management and accurate record tracking",
+      "Administrative Support",
+      "Back Office Operations",
+      "Data Entry",
+      "Document Management",
+      "Filing & Archiving System",
+      "Email Handling",
+      "Report Preparation",
     ],
   },
   {
-    title: "Digital Tools",
+    title: "Digital & Technical Skills",
     skills: [
-      "Google Workspace – Experienced with Docs, Sheets, Drive, and Meet for collaborative work",
-      "Microsoft Excel – Proficient in data management, tables, and advanced formulas",
-      "Microsoft PowerPoint – Capable of creating clear and structured presentations",
-      "Canva – Capable of designing simple graphics, layouts, and professional visual materials",
-      "General Digital Tools – Familiar with PDF editors, cloud storage, email platforms, and basic office equipment operations",
+      "Google Docs, Sheets, Drive",
+      "Microsoft Word & Excel",
+      "Spreadsheet Management",
+      "Typing Accuracy",
+      "Basic IT Support",
+      "Attention to Detail",
+      "Time Management",
     ],
   },
   {

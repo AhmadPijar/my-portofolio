@@ -32,16 +32,17 @@ const AboutSection = () => {
           </h2>
 
           <p className="text-slate-600 leading-relaxed text-sm">
-            I'm currently completing my Digital Office Administration program at
-            BBPVP, developing strong administration, digital tools, and workflow
-            management skills.
+            I have experience supporting logistics and operational activities
+            with a strong focus on data accuracy, documentation, and reporting.
+            I am proficient in Google Workspace and Microsoft Office, and I am
+            currently completing Project-Based Learning Administration Training
+            at BBPVP Bekasi.
           </p>
 
           <p className="text-slate-600 leading-relaxed text-sm">
-            My goal is to start building my professional experience in 2026,
-            focusing on office operations, document processing, and workplace
-            technology. I'm dedicated to improving my digital capabilities while
-            preparing for full-time opportunities.
+            I am detail-oriented, disciplined, and comfortable working in
+            digital office environments. I am seeking opportunities as an
+            Administrative Assistant, Back Office Staff, or Data Entry.
           </p>
 
           {/* DOWNLOAD CV BUTTON — FIXED */}

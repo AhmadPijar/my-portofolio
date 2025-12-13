@@ -59,7 +59,10 @@ const ContactSection = () => {
         <div className="bg-slate-900 p-10 text-white flex flex-col justify-between relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-6">Get in touch with me</h2>
-            <p className="text-slate-400 mb-10 leading-relaxed"></p>
+            <p className="text-slate-400 mb-10 leading-relaxed">
+              Interested in working together? You can contact me via email,
+              LinkedIn or send me message here
+            </p>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">

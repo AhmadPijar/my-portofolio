@@ -28,16 +28,18 @@ const HomeSection = () => {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-            Hi, I'm{" "}
+            Administrative & Back Office{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Ahmad Pijar Maulana
+              Portfolio
             </span>
           </h1>
 
           {/* Subtext */}
           <p className="text-lg text-slate-600 leading-relaxed max-w-md">
-            In this portfolio website you will know more about me, including my
-            skills and background, and my projects.
+            I am an administrative and back-office support candidate with
+            experience in data entry, document management, and digital office
+            tools. This portfolio showcases my administrative projects,
+            documents, and digital work to support office operations.
           </p>
 
           {/* Buttons */}
