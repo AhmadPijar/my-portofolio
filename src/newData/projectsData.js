@@ -1,15 +1,23 @@
 export const projectsData = [
   {
-    title: "Data Entry and Spreadsheet Reporting",
+    title: "Daily Report System",
+    category: "Web App",
+    stack: "Google Sheet, Appscript, Drive, Javascript",
+    desc: "a digital daily reporting system built using Google Apps Script, designed to replace manual paper-based reports from each branch or outlet.",
+    link: "https://sites.google.com/view/dailyreportsystem/halaman-muka",
+  },
+  {
+    title: "Data entry for the dashboard cash flow report.",
     category: "Web app",
-    stack: "Google Workspace, Appscript, Spreadsheet",
-    desc: "Performed data entry and reporting using spreadsheets to support operational and Kas Reporting. Applied basic formulas, sorting, and filtering to maintain data accuracy.",
+    stack: "Google Sheets, Appscript, Drive, Javascript",
+    desc: "Automate and accelerate cash administration processes, eliminating the need for administration software like Excel or spreadsheets.",
     link: "https://sites.google.com/view/projectdashboardkas/halaman-muka",
   },
   {
-    title: "Operational Data Recording & Reporting",
-    category: "Microsoft App",
-    stack: "Microsoft Office, Excel Macro VBA",
+    title: "Dashboard for entering operational stock data.",
+    category: "Microsoft App, Web App",
+    stack:
+      "Microsoft Office, Excel Macro VBA, Google Sheets Appscript, Javascript",
     desc: "Recorded incoming and outgoing goods data and prepared daily stock reports to support operational needs.Ensured data accuracy during stock opname activities",
     link: "https://sites.google.com/view/projectinventoryapp/halaman-muka",
   },
@@ -19,12 +27,5 @@ export const projectsData = [
     stack: "Excel Macro ",
     desc: "fully functional payroll and attendance management tool built entirely in Microsoft Excel, enhanced with VBA automation. It’s designed to simplify HR and administrative tasks for small to medium-sized teams by centralizing employee data, timesheets, and payroll calculations in one place.",
     link: "https://sites.google.com/view/projectpayrollapp/halaman-muka",
-  },
-  {
-    title: "Digital Office Tools",
-    category: "-",
-    stack: "",
-    desc: "Utilized Google Drive for file organization and email handling to support administrative workflows.",
-    link: "",
   },
 ];

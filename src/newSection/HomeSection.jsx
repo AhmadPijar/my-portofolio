@@ -28,9 +28,9 @@ const HomeSection = () => {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-            Administrative & Back Office{" "}
+            Hi, I'm{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Portfolio
+              Ahmad Pijar Maulana
             </span>
           </h1>
 
