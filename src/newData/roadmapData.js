@@ -1,18 +1,5 @@
 export const roadmapData = [
   {
-    year: "2026 (Target)",
-    title: "Full-Time Administrative / Back Office Role",
-    desc: "Targeting a full-time position as an Administrative Assistant or Back Office Staff, applying digital office skills, data management, and professional work discipline developed through training and experience.",
-    details: [
-      "Administrative Support",
-      "Back Office Operations",
-      "Data Entry & Documentation",
-      "Digital Office Environment",
-    ],
-    current: false,
-    future: true,
-  },
-  {
     year: "Nov 2025 - Dec 2025",
     title: "Digital Office Administration Training",
     desc: "Completed intensive Digital Office Administration training at BBPVP through project-based learning to strengthen administrative, documentation, and digital office skills.",

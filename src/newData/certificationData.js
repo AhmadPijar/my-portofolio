@@ -3,12 +3,13 @@ import englishCert1 from "../../public/englishCertificate.png";
 import englishCert2 from "../../public/toefl-certification.png";
 import logisticsCert from "../../public/toyotaBnspCert.png";
 import programmingCert from "../../public/dicodingCert.png";
+import adminCert from "../../public/serti_office-admin.png";
 
 // --- BUTTON LIST ---
 export const certificationButtons = [
   {
     id: 1,
-    title: "Administration Certificate - Ongoing",
+    title: "Administration Certificate",
     popoverTarget: "cert-1",
   },
   { id: 2, title: "English Certifications", popoverTarget: "cert-2" },
@@ -24,7 +25,7 @@ export const certificationDetails = [
     title: "Vocational Training – BBPVP",
     sub1: "Digital Office Administration",
     description: `
-    I am currently attending the Vocational Training Program at BBPVP Bekasi, specializing in Digital Office Administration.
+    I am currently completing the Vocational Training Program at BBPVP Bekasi, specializing in Digital Office Administration.
 
 The training focuses on developing digital office operational skills, administrative workflow, and modern productivity tools.
 
@@ -35,13 +36,10 @@ Training materials include:
 - Digital archiving & electronic filing
 - Office workflow & communication procedures
 - Professional email writing
-
-Status: Ongoing
-
-The certificate will be issued upon completion.
     `,
-    linkSub1: "",
-    image1: "",
+    linkSub1:
+      "https://drive.google.com/file/d/1XMr6HAcyRMyOJbiBltEcbozLv8_7XesO/view?usp=sharing",
+    image1: adminCert,
   },
 
   {

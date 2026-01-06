@@ -79,8 +79,8 @@ const HomeSection = () => {
                   Ahmad Pijar Maulana
                 </div>
                 <div className="mt-2 text-xs text-slate-500">
-                  currently enrolled in a training program for digital office
-                  administration at BBPVP bekasi
+                  currently completed the Digital Office Administration training
+                  program at BBPVP Bekasi.
                 </div>
               </div>
             </div>

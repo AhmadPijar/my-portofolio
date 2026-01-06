@@ -35,7 +35,7 @@ const AboutSection = () => {
             I have experience supporting logistics and operational activities
             with a strong focus on data accuracy, documentation, and reporting.
             I am proficient in Google Workspace and Microsoft Office, and I am
-            currently completing Project-Based Learning Administration Training
+            currently completed Project-Based Learning Administration Training
             at BBPVP Bekasi.
           </p>
 
