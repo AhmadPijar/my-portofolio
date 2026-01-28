@@ -80,13 +80,15 @@ const RoadmapTab = () => {
 
             {/* Expandable Details */}
             <div
-              className={`mt-3 overflow-hidden transition-all duration-300
-                ${isActive ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
+              className={`mt-3 overflow-auto transition-all duration-300
+                ${isActive ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}
               `}
             >
               <ul className="text-slate-500 text-sm space-y-1 ml-4 list-disc">
                 {item.details.map((d, i) => (
-                  <li key={i}>{d}</li>
+                  <li key={i} style={{ whiteSpace: "pre-line" }}>
+                    {d}
+                  </li>
                 ))}
               </ul>
             </div>

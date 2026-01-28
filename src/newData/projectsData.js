@@ -7,7 +7,7 @@ export const projectsData = [
     link: "https://sites.google.com/view/dailyreportsystem/halaman-muka",
   },
   {
-    title: "Data entry for the dashboard cash flow report.",
+    title: "Data entry for the cash flow report dashboard.",
     category: "Web app",
     stack: "Google Sheets, Appscript, Drive, Javascript",
     desc: "Automate and accelerate cash administration processes, eliminating the need for administration software like Excel or spreadsheets.",
