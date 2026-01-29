@@ -104,48 +104,56 @@ const HomeSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* Background */}
-          <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <CircleUserRound className="text-cyan-700" />
+          <a href="https://ahmadpijar.github.io/my-portofolio/#/about">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                <CircleUserRound className="text-cyan-700" />
+              </div>
+              <h3 className="font-bold mb-2">My Background</h3>
+              <p className="text-sm text-slate-500">
+                A brief look at who I am and where I come from.
+              </p>
             </div>
-            <h3 className="font-bold mb-2">My Background</h3>
-            <p className="text-sm text-slate-500">
-              A brief look at who I am and where I come from.
-            </p>
-          </div>
+          </a>
 
           {/* Experience */}
-          <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <Route className="text-blue-700" />
+          <a href="https://ahmadpijar.github.io/my-portofolio/#/about">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                <Route className="text-blue-700" />
+              </div>
+              <h3 className="font-bold mb-2">My Experience</h3>
+              <p className="text-sm text-slate-500">
+                The work and activities I’ve been involved in so far.
+              </p>
             </div>
-            <h3 className="font-bold mb-2">My Experience</h3>
-            <p className="text-sm text-slate-500">
-              The work and activities I’ve been involved in so far.
-            </p>
-          </div>
+          </a>
 
           {/* Skills */}
-          <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <Code className="text-indigo-600" />
+          <a href="https://ahmadpijar.github.io/my-portofolio/#/about">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                <Code className="text-indigo-600" />
+              </div>
+              <h3 className="font-bold mb-2">My Skills</h3>
+              <p className="text-sm text-slate-500">
+                The abilities and tools I’m familiar with.
+              </p>
             </div>
-            <h3 className="font-bold mb-2">My Skills</h3>
-            <p className="text-sm text-slate-500">
-              The abilities and tools I’m familiar with.
-            </p>
-          </div>
+          </a>
 
           {/* Projects */}
-          <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
-            <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
-              <GitPullRequestCreate className="text-purple-600" />
+          <a href="https://ahmadpijar.github.io/my-portofolio/#/projects">
+            <div className="p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition">
+              <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                <GitPullRequestCreate className="text-purple-600" />
+              </div>
+              <h3 className="font-bold mb-2">My Projects</h3>
+              <p className="text-sm text-slate-500">
+                A showcase of the work I’ve created.
+              </p>
             </div>
-            <h3 className="font-bold mb-2">My Projects</h3>
-            <p className="text-sm text-slate-500">
-              A showcase of the work I’ve created.
-            </p>
-          </div>
+          </a>
         </div>
       </section>
 

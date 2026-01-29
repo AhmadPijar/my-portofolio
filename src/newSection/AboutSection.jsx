@@ -1,5 +1,5 @@
 import { useState } from "react";
-import me from "../assets/Me2.jpg";
+import me from "../assets/Profile-Photo.jpg";
 import { Download } from "lucide-react";
 import { RoadmapTab, SkillsTab, CertificationsTab } from "./SubComponents";
 
