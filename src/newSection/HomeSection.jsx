@@ -1,13 +1,8 @@
-import { useContext } from "react";
-import { NavbarContext } from "../newContext";
-import { useNavigate } from "react-router-dom";
-import me from "../assets/Me.jpg";
-import {
-  CircleUserRound,
-  Route,
-  Code,
-  GitPullRequestCreate,
-} from "lucide-react";
+import { useContext } from 'react';
+import { NavbarContext } from '../newContext';
+import { useNavigate } from 'react-router-dom';
+import me from '../assets/Me.jpg';
+import { CircleUserRound, Route, Code, GitPullRequestCreate } from 'lucide-react';
 
 const HomeSection = () => {
   const navigate = useNavigate();
@@ -23,38 +18,27 @@ const HomeSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 text-xs rounded-full text-blue-700 font-semibold">
             <span className="w-2 h-2 rounded-full bg-blue-700 mr-2 animate-pulse"></span>
-            Ready to work
+            Open to work
           </div>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
-            Hi, I'm{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              Ahmad Pijar Maulana
-            </span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Ahmad Pijar Maulana</span>
           </h1>
 
           {/* Subtext */}
           <p className="text-lg text-slate-600 leading-relaxed max-w-md">
-            I am an administrative and back-office support candidate with
-            experience in data entry, document management, and digital office
-            tools. This portfolio showcases my administrative projects,
-            documents, and digital work to support office operations.
+            I am a dedicated administrative professional with a strong foundation in back-office support, data management, and digital office tools. Currently working as a Warehouse Administrator at Rentokil Initial (Metro East Branch), I
+            specialize in streamlining operations and building automated tracking systems. This portfolio showcases my projects in data reconciliation and digital administration designed to enhance business efficiency.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 pt-6">
-            <button
-              onClick={() => navigate("/about")}
-              className="px-8 py-3 bg-slate-900 text-white rounded-lg font-semibold shadow-md hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all"
-            >
+            <button onClick={() => navigate('/about')} className="px-8 py-3 bg-slate-900 text-white rounded-lg font-semibold shadow-md hover:bg-slate-800 hover:shadow-lg hover:-translate-y-0.5 transition-all">
               See My Profile
             </button>
 
-            <button
-              onClick={() => navigate("/contact")}
-              className="px-8 py-3 bg-white border border-slate-300 text-slate-700 rounded-lg font-semibold shadow-md hover:bg-slate-100 hover:shadow-lg hover:-translate-y-0.5 transition-all"
-            >
+            <button onClick={() => navigate('/contact')} className="px-8 py-3 bg-white border border-slate-300 text-slate-700 rounded-lg font-semibold shadow-md hover:bg-slate-100 hover:shadow-lg hover:-translate-y-0.5 transition-all">
               Contact Me
             </button>
           </div>
@@ -66,21 +50,15 @@ const HomeSection = () => {
             <div className="flex flex-col items-center gap-4">
               {/* Photo */}
               <div className="w-60 h-60 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                <img
-                  src={me}
-                  alt="Ahmad Pijar"
-                  className="w-full h-full object-cover"
-                />
+                <img src={me} alt="Ahmad Pijar" className="w-full h-full object-cover" />
               </div>
 
               {/* Info Card */}
               <div className="bg-white rounded-xl shadow p-4 text-center w-full">
-                <div className="text-sm text-slate-600 font-mono">
-                  Ahmad Pijar Maulana
-                </div>
+                <div className="text-sm text-slate-800 font-bold">Ahmad Pijar Maulana</div>
                 <div className="mt-2 text-xs text-slate-500">
-                  currently completed the Digital Office Administration training
-                  program at BBPVP Bekasi.
+                  Warehouse Administrator at Rentokil Initial <br />
+                  <span className="text-blue-500 font-medium mt-1 inline-block">Open to new administrative opportunities.</span>
                 </div>
               </div>
             </div>
@@ -93,13 +71,8 @@ const HomeSection = () => {
       ================================ */}
       <section className="border-t border-slate-200 pt-16">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold">
-            What Will You Discover on This Portfolio?
-          </h2>
-          <p className="text-slate-500 mt-2 max-w-xl mx-auto">
-            A quick overview of my journey, the skills I’ve learned, and the
-            work I’ve created during my digital training.
-          </p>
+          <h2 className="text-3xl font-bold">What Will You Discover on This Portfolio?</h2>
+          <p className="text-slate-500 mt-2 max-w-xl mx-auto">A quick overview of my journey, the skills I’ve learned, and the work I’ve created during my digital training.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -110,9 +83,7 @@ const HomeSection = () => {
                 <CircleUserRound className="text-cyan-700" />
               </div>
               <h3 className="font-bold mb-2">My Background</h3>
-              <p className="text-sm text-slate-500">
-                A brief look at who I am and where I come from.
-              </p>
+              <p className="text-sm text-slate-500">A brief look at who I am and where I come from.</p>
             </div>
           </a>
 
@@ -123,9 +94,7 @@ const HomeSection = () => {
                 <Route className="text-blue-700" />
               </div>
               <h3 className="font-bold mb-2">My Experience</h3>
-              <p className="text-sm text-slate-500">
-                The work and activities I’ve been involved in so far.
-              </p>
+              <p className="text-sm text-slate-500">The work and activities I’ve been involved in so far.</p>
             </div>
           </a>
 
@@ -136,9 +105,7 @@ const HomeSection = () => {
                 <Code className="text-indigo-600" />
               </div>
               <h3 className="font-bold mb-2">My Skills</h3>
-              <p className="text-sm text-slate-500">
-                The abilities and tools I’m familiar with.
-              </p>
+              <p className="text-sm text-slate-500">The abilities and tools I’m familiar with.</p>
             </div>
           </a>
 
@@ -149,9 +116,7 @@ const HomeSection = () => {
                 <GitPullRequestCreate className="text-purple-600" />
               </div>
               <h3 className="font-bold mb-2">My Projects</h3>
-              <p className="text-sm text-slate-500">
-                A showcase of the work I’ve created.
-              </p>
+              <p className="text-sm text-slate-500">A showcase of the work I’ve created.</p>
             </div>
           </a>
         </div>
@@ -164,10 +129,7 @@ const HomeSection = () => {
         <div className="relative z-10">
           <h2 className="text-3xl font-bold mb-4">Professional Highlights</h2>
 
-          <p className="text-slate-400 mb-10 max-w-xl mx-auto">
-            A quick look at my progress, learning journey, and readiness to
-            begin my professional career.
-          </p>
+          <p className="text-slate-400 mb-10 max-w-xl mx-auto">A quick look at my progress, learning journey, and readiness to begin my professional career.</p>
 
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             <div>
