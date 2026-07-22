@@ -1,16 +1,8 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
-// Layout
-import { Navbar, Footer } from "./newComponent";
-
-// Pages/Sections
-import {
-  HomeSection,
-  AboutSection,
-  ProjectsSection,
-  ContactSection,
-} from "./newSection";
-import { NavbarProvider } from "./newContext";
+import { Navbar, Footer } from './newComponent';
+import { HomeSection, AboutSection, ProjectsSection, ContactSection } from './newSection';
+import { NavbarProvider } from './newContext';
 
 function App() {
   return (
@@ -18,7 +10,7 @@ function App() {
       <HashRouter>
         <Navbar />
 
-        <main className="pt-24 px-6 max-w-6xl mx-auto">
+        <main className="mx-auto max-w-7xl px-4 pb-24 pt-24 sm:px-6 lg:px-8">
           <Routes>
             <Route path="/" element={<HomeSection />} />
             <Route path="/about" element={<AboutSection />} />

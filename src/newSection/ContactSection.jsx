@@ -1,33 +1,30 @@
-import { useRef, useState } from "react";
-import { Mail, Linkedin, MapPin, Send, Loader2 } from "lucide-react";
+import { useRef, useState } from 'react';
+import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
+import { StoryBlock } from '../newComponent';
 
 const ContactSection = () => {
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
-  const scriptURL =
-    "https://script.google.com/macros/s/AKfycbylqMLTAYp7u1UH0fCTQFzz9vmVN7kSES-RtJsCbKFJZ15h1Vd-FwoeksPT2tNibZ5Dhg/exec";
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbylqMLTAYp7u1UH0fCTQFzz9vmVN7kSES-RtJsCbKFJZ15h1Vd-FwoeksPT2tNibZ5Dhg/exec';
 
-  // 🔥 Validasi Input
   const validateForm = (data) => {
-    if (!data.get("nama").trim()) return "Nama tidak boleh kosong.";
-    if (!data.get("email").trim()) return "Email tidak boleh kosong.";
-    if (!data.get("pesan").trim()) return "Pesan tidak boleh kosong.";
+    if (!data.get('nama').trim()) return 'Name is required.';
+    if (!data.get('email').trim()) return 'Email is required.';
+    if (!data.get('pesan').trim()) return 'Message is required.';
 
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(data.get("email").trim()))
-      return "Format email tidak valid.";
+    if (!emailPattern.test(data.get('email').trim())) return 'Email format is invalid.';
 
-    return null; // sukses
+    return null;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = formRef.current;
     const formData = new FormData(form);
-
-    // 🔥 Validasi sebelum submit
     const errorMsg = validateForm(formData);
+
     if (errorMsg) {
       alert(errorMsg);
       return;
@@ -36,138 +33,90 @@ const ContactSection = () => {
     setLoading(true);
 
     try {
-      const response = await fetch(scriptURL, {
-        method: "POST",
+      await fetch(scriptURL, {
+        method: 'POST',
         body: formData,
       });
-
-      console.log("Success!", response);
-      alert("Pesan berhasil dikirim!");
+      alert('Message sent successfully.');
       form.reset();
     } catch (error) {
-      console.error("Error!", error.message);
-      alert("Terjadi kesalahan. Coba lagi.");
+      alert('Something went wrong. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100">
-        {/* LEFT */}
-        <div className="bg-slate-900 p-10 text-white flex flex-col justify-between relative overflow-hidden">
-          <div className="relative z-10">
-            <h2 className="text-3xl font-bold mb-6">Get in touch with me</h2>
-            <p className="text-slate-400 mb-10 leading-relaxed">
-              Interested in working together? You can contact me via email,
-              LinkedIn or send me message here
-            </p>
+    <div className="mx-auto max-w-5xl space-y-6">
+      <StoryBlock eyebrow="Contact" title="For operational projects, workflow design conversations, or collaboration opportunities." description="The best conversations usually start with a clear problem statement and a practical goal." />
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
-                  <Mail size={20} />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-500 uppercase font-bold">
-                    Email
-                  </div>
-                  <div className="text-sm font-medium">pijar1806@gmail.com</div>
-                </div>
+      <div className="grid gap-6 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_-35px_rgba(15,23,42,0.28)] lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="bg-slate-900 p-8 text-white">
+          <h2 className="text-2xl font-semibold">Reach out</h2>
+          <p className="mt-3 text-sm leading-7 text-slate-400">If you are looking for someone who can turn operational friction into a more reliable process, I would be glad to connect.</p>
+
+          <div className="mt-8 space-y-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sky-400">
+                <Mail size={18} />
               </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
-                  <Linkedin size={20} />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-500 uppercase font-bold">
-                    Phone
-                  </div>
-                  <div className="text-sm font-medium">0895618969922</div>
-                </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Email</p>
+                <p className="text-sm text-slate-200">pijar1806@gmail.com</p>
               </div>
-
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-blue-400">
-                  <MapPin size={20} />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-500 uppercase font-bold">
-                    Lokasi
-                  </div>
-                  <div className="text-sm font-medium">
-                    Bekasi Timur, Indonesia
-                  </div>
-                </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sky-400">
+                <Phone size={18} />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Phone</p>
+                <p className="text-sm text-slate-200">0895618969922</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sky-400">
+                <MapPin size={18} />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Location</p>
+                <p className="text-sm text-slate-200">Bekasi Timur, Indonesia</p>
               </div>
             </div>
           </div>
-
-          <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600 rounded-full blur-[80px] opacity-20"></div>
         </div>
 
-        {/* RIGHT: FORM */}
-        <div className="p-10">
-          <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
+        <div className="p-8">
+          <form ref={formRef} className="space-y-4" onSubmit={handleSubmit}>
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">
-                Nama Lengkap
-              </label>
-              <input
-                name="nama"
-                type="text"
-                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
-                placeholder="John Doe"
-              />
+              <label className="mb-2 block text-sm font-semibold text-slate-700">Name</label>
+              <input name="nama" type="text" className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-sky-500 focus:bg-white" placeholder="Your name" />
             </div>
-
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">
-                Email
-              </label>
-              <input
-                name="email"
-                type="email"
-                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
-                placeholder="john@example.com"
-              />
+              <label className="mb-2 block text-sm font-semibold text-slate-700">Email</label>
+              <input name="email" type="email" className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-sky-500 focus:bg-white" placeholder="name@example.com" />
             </div>
-
             <div>
-              <label className="block text-sm font-bold text-slate-700 mb-2">
-                Pesan
-              </label>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">Message</label>
               <textarea
                 name="pesan"
                 rows="4"
-                className="w-full px-4 py-3 rounded-lg bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all resize-none"
-                placeholder="Tulis pesan anda"
-              ></textarea>
+                className="w-full resize-none rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-sky-500 focus:bg-white"
+                placeholder="Tell me about the workflow challenge you are facing."
+              />
             </div>
-
-            {/* BUTTON WITH LOADING */}
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 text-white font-bold rounded-lg flex items-center justify-center gap-2 transition-colors shadow-lg shadow-blue-200 
-                ${
-                  loading
-                    ? "bg-blue-400 cursor-not-allowed"
-                    : "bg-blue-600 hover:bg-blue-700"
-                }
-              `}
+              className={`flex w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-4 py-3 text-sm font-semibold text-white transition ${loading ? 'cursor-not-allowed opacity-70' : 'hover:bg-slate-700'}`}
             >
               {loading ? (
                 <>
-                  <Loader2 size={18} className="animate-spin" />
-                  Mengirim...
+                  <Loader2 size={16} className="animate-spin" /> Sending...
                 </>
               ) : (
                 <>
-                  <Send size={18} />
-                  Kirim Pesan
+                  <Send size={16} /> Send message
                 </>
               )}
             </button>

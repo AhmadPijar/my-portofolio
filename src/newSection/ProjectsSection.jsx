@@ -1,100 +1,84 @@
 import { useState } from 'react';
-import { ChevronRight, X } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 import { projectsData } from '../newData';
+import { StoryBlock, InfoPill } from '../newComponent';
 
 const ProjectsSection = () => {
-  // State untuk menyimpan data project yang sedang dipilih untuk pop-up
   const [selectedProject, setSelectedProject] = useState(null);
-
-  // Fungsi untuk menutup pop-up
   const closeModal = () => setSelectedProject(null);
 
   return (
-    <div>
-      <div className="mb-10 text-center max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
-        <p className="text-slate-500">A collection of case studies where I applied technical solutions to real-world problems.</p>
-      </div>
+    <div className="space-y-8">
+      <StoryBlock
+        eyebrow="Case studies"
+        title="Each project was designed around a specific operational need: reduce friction, preserve evidence, and support better decisions."
+        description="The stories below focus less on visual novelty and more on the way the workflow behaves under real operational pressure."
+      >
+        <div className="grid gap-4 lg:grid-cols-3">
+          <InfoPill label="Primary context" value="Warehouse operations" tone="accent" />
+          <InfoPill label="Core method" value="Structured workflow design" tone="default" />
+          <InfoPill label="Result" value="Cleaner handoffs and faster follow-up" tone="success" />
+        </div>
+      </StoryBlock>
 
-      {/* Grid Project Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         {projectsData.map((project, idx) => (
-          <div key={idx} className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 flex flex-col h-full">
-            {/* Mockup Window Header */}
-            <div className="bg-slate-50 px-4 py-3 border-b border-slate-100 flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-400/50"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-400/50"></div>
-              <div className="w-3 h-3 rounded-full bg-green-400/50"></div>
+          <article
+            key={idx}
+            className="group flex h-full flex-col overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_-35px_rgba(15,23,42,0.28)] transition hover:-translate-y-1 hover:shadow-[0_30px_80px_-30px_rgba(15,23,42,0.35)]"
+          >
+            <div className="border-b border-slate-100 bg-slate-50/80 px-5 py-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">{project.category}</p>
+              <h3 className="mt-2 text-xl font-semibold text-slate-900">{project.title}</h3>
             </div>
 
-            <div className="p-8 flex-1 flex flex-col">
-              <span className="text-xs font-bold tracking-wider text-blue-600 uppercase mb-2 block">{project.category}</span>
-              <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">{project.title}</h3>
-              <p className="text-slate-500 text-sm mb-6 leading-relaxed flex-1">{project.desc}</p>
-
-              <div className="flex items-center justify-between pt-6 border-t border-slate-100 mt-auto">
-                <span className="text-xs font-mono text-slate-400 truncate max-w-[60%]">{project.stack}</span>
-                <button onClick={() => setSelectedProject(project)} className="text-slate-800 hover:text-blue-600 transition-colors flex items-center gap-1 text-sm font-medium focus:outline-none">
-                  View Details <ChevronRight size={16} />
+            <div className="flex flex-1 flex-col p-6">
+              <p className="text-sm leading-7 text-slate-600">{project.desc}</p>
+              <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">Operational focus</p>
+                <p className="mt-2 text-sm text-slate-700">{project.achievements?.[0] || 'Built for practical use in everyday operations.'}</p>
+              </div>
+              <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-5 mt-6">
+                <span className="text-xs font-mono text-slate-400">{project.stack}</span>
+                <button onClick={() => setSelectedProject(project)} className="inline-flex items-center gap-1 text-sm font-semibold text-slate-700 transition hover:text-slate-900">
+                  View story <ArrowRight size={15} />
                 </button>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
-      {/* Modal / Pop-up Overlay */}
       {selectedProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm transition-opacity"
-          onClick={closeModal} // Menutup modal jika area luar di-klik
-        >
-          <div
-            className="bg-white rounded-2xl max-w-2xl w-full p-6 md:p-8 relative max-h-[90vh] overflow-y-auto shadow-2xl"
-            onClick={(e) => e.stopPropagation()} // Mencegah klik di dalam kotak agar tidak menutup modal
-          >
-            {/* Tombol Close (X) */}
-            <button onClick={closeModal} className="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-full transition-colors focus:outline-none">
-              <X size={20} />
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/50 p-4 backdrop-blur-sm" onClick={closeModal}>
+          <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-[28px] bg-white p-6 shadow-2xl sm:p-8" onClick={(e) => e.stopPropagation()}>
+            <button onClick={closeModal} className="absolute right-4 top-4 rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700">
+              <X size={18} />
             </button>
 
-            {/* Konten Pop-up */}
-            <span className="text-xs font-bold tracking-wider text-blue-600 uppercase mb-2 block">{selectedProject.category}</span>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">{selectedProject.title}</h3>
-            <p className="text-slate-600 mb-6 leading-relaxed">{selectedProject.desc}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">{selectedProject.category}</p>
+            <h3 className="mt-2 text-2xl font-semibold text-slate-900">{selectedProject.title}</h3>
+            <p className="mt-4 text-sm leading-7 text-slate-600">{selectedProject.desc}</p>
 
-            <div className="mb-8">
-              <h4 className="text-sm font-bold text-slate-900 mb-3 uppercase tracking-wide">Key Achievements & Features</h4>
-              <ul className="space-y-2">
-                {/* Walkthrough / Detail Penjelasan & Gambar */}
-                {selectedProject.walkthrough && selectedProject.walkthrough.length > 0 && (
-                  <div className="mb-8 space-y-6">
-                    <h4 className="text-sm font-bold text-slate-900 mb-4 uppercase tracking-wide">System Walkthrough</h4>
-
-                    {selectedProject.walkthrough.map((step, idx) => (
-                      <div key={idx} className="bg-slate-50 p-5 rounded-xl border border-slate-200">
-                        {/* Judul dan Teks Penjelasan */}
-                        <h5 className="font-bold text-slate-800 mb-2">{step.title}</h5>
-                        <p className="text-slate-600 text-sm mb-4 leading-relaxed">{step.desc}</p>
-
-                        {/* Render Gambar (Grid Otomatis menyesuaikan jumlah foto) */}
-                        <div className={`grid gap-4 ${step.images.length > 1 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                          {step.images.map((img, imgIdx) => (
-                            <div key={imgIdx} className="overflow-hidden rounded-lg border border-slate-200 shadow-sm">
-                              <img src={img} alt={`${step.title} - Preview ${imgIdx + 1}`} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-300" loading="lazy" />
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </ul>
+            <div className="mt-8 space-y-4">
+              {selectedProject.walkthrough?.map((step, idx) => (
+                <div key={idx} className="rounded-[24px] border border-slate-200 bg-slate-50/80 p-5">
+                  <h4 className="text-sm font-semibold text-slate-900">{step.title}</h4>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">{step.desc}</p>
+                  {step.images?.length ? (
+                    <div className={`mt-4 grid gap-4 ${step.images.length > 1 ? 'md:grid-cols-2' : 'grid-cols-1'}`}>
+                      {step.images.map((img, imgIdx) => (
+                        <img key={imgIdx} src={img} alt={`${step.title} ${imgIdx + 1}`} className="h-auto w-full rounded-2xl border border-slate-200 object-cover" loading="lazy" />
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ))}
             </div>
 
-            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <span className="text-xs font-bold text-slate-500 uppercase tracking-wide block mb-2">Technical Stack</span>
-              <span className="text-sm font-mono text-slate-700 bg-white px-3 py-1.5 rounded-lg border border-slate-200 inline-block">{selectedProject.stack}</span>
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50/80 p-4">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">Stack</p>
+              <p className="mt-2 text-sm font-mono text-slate-700">{selectedProject.stack}</p>
             </div>
           </div>
         </div>

@@ -1,74 +1,65 @@
 import { useState } from 'react';
 import me from '../assets/Profile-Photo.jpg';
-import { Download } from 'lucide-react';
+import { Download, BriefcaseBusiness, Workflow } from 'lucide-react';
 import { RoadmapTab, SkillsTab, CertificationsTab } from './SubComponents';
+import { StoryBlock, InfoPill } from '../newComponent';
 
 const AboutSection = () => {
   const [activeTab, setActiveTab] = useState('roadmap');
 
   return (
-    <div className="space-y-16">
-      {/* --- TOP SECTION: PROFILE CARD --- */}
-      <div className="flex flex-col lg:flex-row items-start gap-10">
-        {/* LEFT — PROFILE IMAGE */}
-        <div className="w-full lg:w-1/3">
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-purple-600 rounded-2xl transform rotate-3 group-hover:rotate-1 transition-transform opacity-70"></div>
-
-            <div className="relative bg-white p-2 rounded-2xl">
-              <img src={me} alt="Ahmad Pijar" className="w-full aspect-[2/2] object-cover rounded-xl" />
-            </div>
+    <div className="space-y-8">
+      <StoryBlock
+        eyebrow="Operational perspective"
+        title="The work is grounded in warehouse administration, process discipline, and practical problem-solving."
+        description="The focus is not only on building tools, but on understanding the business flow behind them and creating systems that people can actually use day to day."
+      >
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-slate-50 p-2">
+            <img src={me} alt="Ahmad Pijar" className="h-full w-full rounded-[20px] object-cover" />
           </div>
-        </div>
-
-        {/* RIGHT — BIO TEXT */}
-        <div className="w-full lg:w-2/3 space-y-5">
-          <h2 className="text-3xl font-bold text-slate-900">Hello, I'm Ahmad.</h2>
-
-          <p className="text-slate-600 leading-relaxed text-sm">
-            I am a dedicated administrative professional currently working as a Warehouse Administrator at Rentokil Initial (Metro East Branch). I have hands-on experience supporting logistics and operational activities, with a strong focus
-            on inventory reconciliation, data accuracy, and comprehensive reporting. My foundational administrative skills were solidly built through the Project-Based Learning Administration Training program at BBPVP Bekasi.
-          </p>
-
-          <p className="text-slate-600 leading-relaxed text-sm">
-            Beyond standard administrative tasks, I am deeply passionate about workflow optimization. I actively build custom automated solutions—such as Google Apps Script workflows—to eliminate data discrepancies and streamline repetitive
-            office operations. Detail-oriented and disciplined, I am currently seeking new opportunities as an Administrative Assistant, Back Office Staff, or Data Entry specialist where I can contribute both organizational excellence and
-            technical efficiency.
-          </p>
-
-          {/* DOWNLOAD CV BUTTON — FIXED */}
-          <div className="pt-4">
+          <div className="space-y-4">
+            <div className="flex flex-wrap gap-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700">
+                <BriefcaseBusiness size={16} className="text-sky-700" /> Warehouse administrator
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700">
+                <Workflow size={16} className="text-sky-700" /> Process improvement focus
+              </div>
+            </div>
+            <p className="text-sm leading-7 text-slate-600">
+              I work in environments where data quality, timing, and clear handoffs matter. That experience shaped a preference for simple systems that reduce rework, make exceptions visible, and help teams act with confidence.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              <InfoPill label="Current role" value="Warehouse Administrator" tone="accent" />
+              <InfoPill label="Core strength" value="Workflow and reporting" tone="default" />
+            </div>
             <a
               href="https://drive.google.com/file/d/1O_nE2o03LsG9_EYpk9hIDTtW9efspyWU/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-slate-300 text-sm font-medium hover:bg-slate-100 transition-all"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
             >
-              <Download size={18} /> Download My CV
+              <Download size={16} /> Download CV
             </a>
           </div>
         </div>
-      </div>
+      </StoryBlock>
 
-      {/* --- BOTTOM SECTION: TABS --- */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm min-h-[600px] flex flex-col">
-        {/* Tabs */}
-        <div className="flex border-b border-slate-100 p-2 gap-1 overflow-x-auto">
+      <div className="rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_-35px_rgba(15,23,42,0.28)]">
+        <div className="flex flex-wrap gap-2 border-b border-slate-100 p-3">
           {['roadmap', 'skills', 'certifications'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-3 rounded-lg text-sm font-bold capitalize transition
-                ${activeTab === tab ? 'bg-slate-50 text-blue-700' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-50'}
-              `}
+              className={`rounded-full px-4 py-2 text-sm font-semibold capitalize transition ${activeTab === tab ? 'bg-slate-900 text-white' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'}`}
             >
               {tab}
             </button>
           ))}
         </div>
 
-        {/* Tab Content */}
-        <div className="p-8 flex-1">
+        <div className="p-6 sm:p-8">
           {activeTab === 'roadmap' && <RoadmapTab />}
           {activeTab === 'skills' && <SkillsTab />}
           {activeTab === 'certifications' && <CertificationsTab />}
