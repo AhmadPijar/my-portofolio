@@ -1,71 +1,72 @@
 export const roadmapData = [
   {
-    year: 'Jan 2026 - Present', // Sesuaikan bulannya jika perlu
-    title: 'Warehouse Administrator',
-    desc: 'Rentokil Initial (Metro East Branch)',
+    year: '2018 - 2022',
+    title: 'SMK / Technical Foundation',
+    desc: 'SMK Teknik Instalasi Tenaga Listrik',
     details: [
-      'Engineered an automated data comparison system (Google Apps Script) to instantly reconcile warehouse dispatch data with technician service records.',
-      'Managed internal procurement to headquarters and developed a centralized digital tracking form to streamline order monitoring and transparency.',
-      'Conducted comprehensive monthly stocktakes and inventory reconciliations, consistently maintaining zero discrepancies.',
-      'Processed daily physical and digital documentation across three distinct warehouse facilities, ensuring 100% data accuracy in the central system.',
-      'Prepared, verified, and managed delivery notes (Surat Jalan) and dispatch documents to ensure smooth logistics distribution.',
-      'Monitored daily inventory levels, tracked stock movements, and collaborated with cross-functional teams to optimize warehouse reporting operations.',
+      'My education gave me a practical technical background and introduced me to working with procedures, technical systems, and careful execution.',
+      'It shaped the way I approach work: understand the process, pay attention to details, and make sure the job is done correctly the first time.',
     ],
-    current: true, // Nilai ini akan membuat bulatan timeline berwarna biru/aktif di UI kamu
-    future: false,
-  },
-  {
-    year: 'Nov 2025 - Dec 2025',
-    title: 'Digital Office Administration Training',
-    desc: 'BBPVP Bekasi / CEVEST - Kayuringin Jaya, Bekasi Sel',
-    details: [
-      `I have completed intensive Digital Office Administration training at BBPVP through project-based learning to strengthen administrative, documentation, and digital office skills.
-        - Digital Office Administration
-        - Google Workspace & Microsoft Office
-        - Document Management & Reporting
-        - 2-month Project-Based Learning`,
-    ],
-    current: false,
-    future: false,
-  },
-  {
-    year: 'Sept 2023 - Aug 2025',
-    title: 'Warehouse Staff',
-    desc: 'PT Chargeurs PCC Indonesia – KBN, Jakarta',
-    details: ['Recorded incoming and outgoing goods data', 'Prepared goods using FIFO system', 'Arranged inventory placement and storage', 'Performed routine stock opname to ensure data accuracy'],
     current: false,
     future: false,
   },
   {
     year: 'Aug 2022 - Feb 2023',
     title: 'Logistics Operator',
-    desc: 'PT Toyota Motor Manufacturing Indonesia – Sunter, Jakarta',
-    details: ['Supported supply chain and distribution processes', 'Checked and verified goods using hand scanners', 'Operated conveyor systems to ensure smooth logistics flow'],
+    desc: 'PT Toyota Motor Manufacturing Indonesia',
+    details: [
+      'This was my early introduction to logistics operations in a production environment.',
+      'I verified and scanned outbound goods, maintained distribution records, and followed safety procedures while operating conveyor systems.',
+      'It taught me how important accuracy, coordination, and discipline are in a work flow that moves fast.',
+    ],
+    current: false,
+    future: false,
+  },
+  {
+    year: 'Sept 2023 - Sept 2025',
+    title: 'Warehouse Staff',
+    desc: 'PT Chargeurs PCC Indonesia',
+    details: [
+      'This role expanded my warehouse experience from physical operations into daily documentation and record keeping.',
+      'I updated incoming and outgoing goods data, supported stock opname, and helped maintain consistency between recorded data and actual stock conditions.',
+      'It gave me a clearer understanding of the relationship between warehouse activity and the information behind it.',
+    ],
+    current: false,
+    future: false,
+  },
+  {
+    year: 'Nov 2025 - Dec 2025',
+    title: 'Digital Office Administration Training',
+    desc: 'BBPVP Bekasi',
+    details: [
+      'After gaining hands-on warehouse experience, I wanted to strengthen the administrative and digital side of my skill set.',
+      'The training focused on practical office administration, documentation, and digital workplace tools such as Google Workspace and Microsoft Office.',
+      'It helped me connect warehouse work with office workflows and made me more interested in improving how information is managed.',
+    ],
+    current: false,
+    future: false,
+  },
+  {
+    year: 'Jan 2026 - Sept 2026',
+    title: 'Warehouse Admin',
+    desc: 'Rentokil Initial - Metro East Branch, Jakarta',
+    details: [
+      'This role brought me closer to the administrative side of warehouse work, especially in documentation, inventory records, and daily reporting.',
+      'My responsibilities included delivery notes, packing lists, stock transactions, month-end reconciliation, and follow-up on warehouse requirements.',
+      'It also showed me how much the quality of a record affects the next step in the process — whether goods can be found, requests can be followed up, or information can be checked later.',
+      'This was the period where I started experimenting more with simple digital tools to handle repetitive tasks in a more structured way.',
+    ],
     current: false,
     future: false,
   },
   {
     year: '',
-    title: 'Other Work Experience',
-    desc: 'My short-Term / Part-Time Work',
+    title: 'Other Experience',
+    desc: 'Short-term & Part-time Roles',
     details: [
-      `Production Operator - PT Sinar Masking Lestari
-October 2025
-- Assembled product components following work instructions
-- Performed quality checking to ensure product standards
-- Handled final packaging with attention to detail
-
-Barista - Bliss Social Space
-September 2025
-- Prepared and served coffee beverages
-- Managed ingredient stock and cleaned equipment
-- Handled cash transactions and customer service
-
-Computer Store Staff - Virago Technicom
-Jun 2023 - Jul 2023
-- Provided customer service and handled sales transactions
-- Recorded stock availability and organized product displays
-- Prepared simple daily operational reports`,
+      'Production Operator — PT Sinar Masking Lestari\nI handled production tasks, quality checking, and packaging work in a fast-paced manufacturing setting.',
+      'Barista — Bliss Social Space\nI managed beverage preparation, stock handling, cash transactions, and customer service in a service-based environment.',
+      'Computer Store Staff — Virago Technicom\nI assisted customers, organized product displays, checked stock availability, and prepared simple daily operational reports.',
     ],
     current: false,
     future: false,

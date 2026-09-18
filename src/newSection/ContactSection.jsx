@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Send, Loader2 } from 'lucide-react';
 import { StoryBlock } from '../newComponent';
 
 const ContactSection = () => {
@@ -48,12 +48,16 @@ const ContactSection = () => {
 
   return (
     <div className="mx-auto max-w-5xl space-y-6">
-      <StoryBlock eyebrow="Contact" title="For operational projects, workflow design conversations, or collaboration opportunities." description="The best conversations usually start with a clear problem statement and a practical goal." />
+      <StoryBlock
+        eyebrow="LET'S CONNECT"
+        title="Interested in working together or talking about practical digital tools?"
+        description="I am always open to new career opportunities, sharing ideas about warehouse administration, or simply talking about how spreadsheets and simple automation can make everyday work easier to follow."
+      />
 
       <div className="grid gap-6 overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_20px_60px_-35px_rgba(15,23,42,0.28)] lg:grid-cols-[0.9fr_1.1fr]">
         <div className="bg-slate-900 p-8 text-white">
           <h2 className="text-2xl font-semibold">Reach out</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-400">If you are looking for someone who can turn operational friction into a more reliable process, I would be glad to connect.</p>
+          <p className="mt-3 text-sm leading-7 text-slate-400">Whether you have a role that fits my background or just want to connect and share experiences, I would love to hear from you.</p>
 
           <div className="mt-8 space-y-5">
             <div className="flex items-center gap-3">
@@ -62,7 +66,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Email</p>
-                <p className="text-sm text-slate-200">pijar1806@gmail.com</p>
+                <a href="mailto:pijar1806@gmail.com" className="text-sm text-slate-200 transition hover:text-white">
+                  pijar1806@gmail.com
+                </a>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -71,7 +77,9 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Phone</p>
-                <p className="text-sm text-slate-200">0895618969922</p>
+                <a href="tel:+62895618969922" className="text-sm text-slate-200 transition hover:text-white">
+                  0895618969922
+                </a>
               </div>
             </div>
             <div className="flex items-center gap-3">
@@ -81,6 +89,28 @@ const ContactSection = () => {
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">Location</p>
                 <p className="text-sm text-slate-200">Bekasi Timur, Indonesia</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sky-400">
+                <Linkedin size={18} />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/ahmad-pijar-49a385279" target="_blank" rel="noreferrer" className="text-sm text-slate-200 transition hover:text-white hover:underline">
+                  linkedin.com/in/ahmad-pijar-49a385279
+                </a>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 text-sky-400">
+                <Github size={18} />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-slate-500">GitHub</p>
+                <a href="https://github.com/AhmadPijar" target="_blank" rel="noreferrer" className="text-sm text-slate-200 transition hover:text-white hover:underline">
+                  github.com/AhmadPijar
+                </a>
               </div>
             </div>
           </div>
@@ -102,7 +132,7 @@ const ContactSection = () => {
                 name="pesan"
                 rows="4"
                 className="w-full resize-none rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 outline-none transition focus:border-sky-500 focus:bg-white"
-                placeholder="Tell me about the workflow challenge you are facing."
+                placeholder="Hi Ahmad, I'm reaching out to talk about..."
               />
             </div>
             <button

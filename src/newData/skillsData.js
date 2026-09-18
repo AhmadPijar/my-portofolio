@@ -1,46 +1,18 @@
 export const skillsGroups = [
   {
-    title: "Administrative & Office Skills",
-    skills: [
-      "Administrative Support",
-      "Back Office Operations",
-      "Data Entry",
-      "Document Management",
-      "Filing & Archiving System",
-      "Email Handling",
-      "Report Preparation",
-    ],
+    title: 'Warehouse & Logistics',
+    skills: ['Inventory Control', 'Stock Reconciliation', 'Stock Opname', 'Inbound & Outbound Goods', 'Delivery Notes', 'Packing Lists', 'Warehouse Documentation'],
   },
   {
-    title: "Digital & Technical Skills",
-    skills: [
-      "Google Docs, Sheets, Drive",
-      "Microsoft Word & Excel",
-      "Spreadsheet Management",
-      "Typing Accuracy",
-      "Basic IT Support",
-      "Attention to Detail",
-      "Time Management",
-    ],
+    title: 'Administration & Documentation',
+    skills: ['Data Entry', 'Document Management', 'Filing & Archiving', 'Report Preparation', 'Purchase Request Support', 'Email Correspondence', 'Daily Record Keeping'],
   },
   {
-    title: "Web Basics",
-    skills: [
-      "HTML & CSS – Strong understanding of semantic HTML, responsive layout, and modern styling practices",
-      "React – Familiar with component-based architecture, state management, and hooks",
-      "Tailwind CSS – Skilled in utility-first styling and building responsive UI efficiently",
-      "JavaScript Fundamentals – Basic knowledge of syntax, DOM manipulation, and event handling",
-      "Git & GitHub – Proficient in version control, branching, pull requests, and repository management",
-    ],
+    title: 'Digital Tools & Automation',
+    skills: ['Microsoft Excel', 'Google Sheets', 'Google Apps Script', 'JavaScript', 'React', 'HTML & CSS', 'Git & GitHub'],
   },
   {
-    title: "Soft Skills",
-    skills: [
-      "Adaptability and quick learning",
-      "Problem-solving and critical thinking",
-      "Time management and task prioritization",
-      "Teamwork and collaboration",
-      "Strong communication skills",
-    ],
+    title: 'Work Habits',
+    skills: ['Attention to detail', 'Problem solving', 'Learning by doing', 'Time management', 'Coordination and follow-up', 'Adaptability'],
   },
 ];

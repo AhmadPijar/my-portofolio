@@ -10,14 +10,14 @@ const ProjectsSection = () => {
   return (
     <div className="space-y-8">
       <StoryBlock
-        eyebrow="Case studies"
-        title="Each project was designed around a specific operational need: reduce friction, preserve evidence, and support better decisions."
-        description="The stories below focus less on visual novelty and more on the way the workflow behaves under real operational pressure."
+        eyebrow="PROJECTS & EXPERIMENTS"
+        title="Some things I built along the way."
+        description="Most of these projects started from a simple problem I encountered at work or a process I wanted to understand better. Some became useful workplace tools, while others were experiments that helped me learn."
       >
         <div className="grid gap-4 lg:grid-cols-3">
-          <InfoPill label="Primary context" value="Warehouse operations" tone="accent" />
-          <InfoPill label="Core method" value="Structured workflow design" tone="default" />
-          <InfoPill label="Result" value="Cleaner handoffs and faster follow-up" tone="success" />
+          <InfoPill label="WHERE THEY STARTED" value="Workplace problems & learning projects" tone="accent" />
+          <InfoPill label="WHAT I USE" value="Sheets, Excel, Apps Script & web tools" tone="default" />
+          <InfoPill label="WHAT I FOCUS ON" value="Making everyday work easier to follow" tone="success" />
         </div>
       </StoryBlock>
 
@@ -35,10 +35,10 @@ const ProjectsSection = () => {
             <div className="flex flex-1 flex-col p-6">
               <p className="text-sm leading-7 text-slate-600">{project.desc}</p>
               <div className="mt-6 rounded-2xl border border-slate-200 bg-slate-50/70 p-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">Operational focus</p>
-                <p className="mt-2 text-sm text-slate-700">{project.achievements?.[0] || 'Built for practical use in everyday operations.'}</p>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">WHY I BUILT IT</p>
+                <p className="mt-2 text-sm text-slate-700">{project.achievements?.[0] || 'Built to solve a practical problem in daily work.'}</p>
               </div>
-              <div className="mt-auto flex items-center justify-between border-t border-slate-100 pt-5 mt-6">
+              <div className="mt-auto mt-6 flex items-center justify-between border-t border-slate-100 pt-5">
                 <span className="text-xs font-mono text-slate-400">{project.stack}</span>
                 <button onClick={() => setSelectedProject(project)} className="inline-flex items-center gap-1 text-sm font-semibold text-slate-700 transition hover:text-slate-900">
                   View story <ArrowRight size={15} />

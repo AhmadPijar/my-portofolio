@@ -29,7 +29,7 @@ const Navbar = () => {
   }, [setIsScrolled]);
 
   return (
-    <nav className={`fixed left-0 top-0 z-50 w-full transition-all ${isScrolled ? 'navbar-scroll shadow-sm' : 'bg-transparent'}`}>
+    <nav className={`fixed left-0 top-0 z-50 w-full transition-all duration-160 ease-in-out ${isScrolled ? 'navbar-scroll shadow-sm' : 'bg-transparent border-b border-transparent'}`}>
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <button onClick={() => navigate('/')} className="flex items-center gap-2 text-left">
           <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50 text-slate-700">
@@ -37,13 +37,13 @@ const Navbar = () => {
           </div>
           <div>
             <p className="text-sm font-semibold tracking-[0.24em] text-slate-500 uppercase">Portfolio</p>
-            <p className="text-base font-semibold text-slate-900">Operational Suite</p>
+            <p className="text-base font-semibold text-slate-900 hover:text-violet-800 cursor-pointer">Ahmad Pijar Maulana</p>
           </div>
         </button>
 
         <div className="hidden gap-8 md:flex">
           {navItems.map((item) => (
-            <Link key={item.path} to={item.path} className="text-sm font-medium text-slate-700 transition hover:text-slate-900">
+            <Link key={item.path} to={item.path} className="text-sm font-medium text-slate-700 transition hover:text-violet-800">
               {item.label}
             </Link>
           ))}

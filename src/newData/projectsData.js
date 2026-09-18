@@ -5,6 +5,7 @@ import sheetsImg from '../assets/project_compare/Sheets.png';
 import reportMinImg from '../assets/project_compare/ReportMin.png';
 import outomationImg from '../assets/project_compare/Outomation.png';
 import trackingMinImg from '../assets/project_compare/Tracking-min.png';
+
 import rwForm from '../assets/project_RW/form.png';
 import rwStatus from '../assets/project_RW/status.png';
 import rwGateway from '../assets/project_RW/gateway.png';
@@ -13,123 +14,165 @@ import rwDatabase from '../assets/project_RW/database.png';
 
 export const projectsData = [
   {
-    title: 'Automated Inventory Reconciliation System',
-    category: 'Warehouse Automation',
-    stack: 'Google Apps Script, Google Sheets API, HTML/CSS',
-    desc: 'A custom automation tool to instantly reconcile warehouse dispatch data with technician service records, eliminating manual comparison.',
+    title: 'Warehouse Order Portal',
+    category: 'Workplace Project',
+    stack: 'Google Apps Script, HTML, CSS, JavaScript, Google Sheets',
+    desc: 'I built this after seeing how difficult it could be to keep track of requests when they arrived through several different channels. The goal was to collect those requests into one workflow so they were easier to submit, review, and follow up.',
     achievements: [
-      'Engineered a zero-discrepancy tracking system by automatically matching TSV and BC data.',
-      'Replaced complex manual SUMIFS and copy-pasting with a 1-click script execution.',
-      'Built an interactive UI (Sidebar) for quick document investigation and instant photo evidence uploads.',
-      'Automated evidence archiving with hierarchical folder creation directly in Google Drive.',
-    ],
-    // FITUR BARU: Penjelasan detail berdampingan dengan gambar
-    walkthrough: [
-      {
-        title: '1. Raw Data Processing',
-        desc: 'The system extracts and transforms daily operational data from two distinct sources: Technician Service records (TSV) and Warehouse Dispatch data (BC).',
-        images: [tsvImg, bcImg], // Menampilkan 2 foto sejajar
-      },
-      {
-        title: '2. One-Click Automated Comparison',
-        desc: 'By executing a custom Google Apps Script, the system aggregates the raw data and generates a clean comparison table. Discrepancies (variances) are automatically calculated and highlighted in red.',
-        images: [compareImg],
-      },
-      {
-        title: '3. Discrepancy Tracking & Reporting',
-        desc: "All negative variances are automatically pushed to a centralized 'Report Minus' sheet. The system tracks back to the raw BC data to find the exact transaction details causing the discrepancy.",
-        images: [reportMinImg, trackingMinImg],
-      },
-      {
-        title: '4. Interactive Investigation UI (Sidebar)',
-        desc: 'I built a custom HTML/CSS Sidebar within Google Sheets. Users can click on any discrepancy to view the transaction history, input an investigation reason, and directly upload photo evidence (which dynamically creates organized folders in Google Drive).',
-        images: [outomationImg],
-      },
-    ],
-  },
-  {
-    title: 'Internal Order Management System',
-    category: 'Operations System',
-    stack: 'Google Apps Script, HTML/CSS, Bootstrap, Google Sheets API',
-    desc: 'A centralized web application designed to streamline the internal ordering process, bridging the gap between unstructured sales requests and warehouse fulfillment.',
-    achievements: [
-      'Standardized chaotic email-based orders into a unified digital system, preventing data loss and communication bottlenecks.',
-      'Developed a dynamic front-end UI with auto-complete functionality synced directly to a centralized Master Data sheet.',
-      'Built a secure, PIN-protected "Storekeeper Gateway" for real-time order verification, approval, and rejection workflows.',
-      'Optimized backend performance by bypassing Google Sheets latency, ensuring real-time status updates without heavy database loads.',
+      'Brings item requests from email, Google Sheets, WhatsApp, chat, and direct messages into one place.',
+      'Uses warehouse master data to help users select the correct item information instead of relying on manual typing.',
+      'Lets requesters check the status of their request without repeatedly asking the warehouse team for updates.',
+      'Provides a separate workflow for storekeepers to review approval or rejection with a reason attached.',
+      'Keeps request data in a more structured log for follow-up and procurement activities.',
     ],
     walkthrough: [
       {
-        title: '1. Dynamic Order Request Form',
-        desc: 'Sales teams can seamlessly request multiple items in a single transaction. The form features an auto-complete input directly linked to the warehouse Master Data, ensuring accurate item codes and completely eliminating manual typing errors.',
-        images: [rwForm],
+        title: '1. Starting Point',
+        desc: 'The problem was simple but common: requests came through several channels, and the information was not always easy to track in one place. The same item might be requested in different ways, and sometimes the status was hard to follow.',
+        // images: [rwForm],
       },
       {
-        title: '2. Real-Time Status Tracking',
-        desc: 'A dedicated dashboard allows users to track the exact status of their requests (Pending, Approved, Rejected) in real-time. It includes a live search and filter functionality, significantly reducing repetitive follow-up questions to the warehouse team.',
-        images: [rwStatus],
+        title: '2. The Approach',
+        desc: 'I wanted to build a single form where requests could be submitted more consistently. The workflow also needed to help users avoid mistakes when entering item information and keep the process easier to follow after submission.',
+        // images: [rwForm],
       },
       {
-        title: '3. Secure Storekeeper Gateway',
-        desc: 'Warehouse managers access a hidden, PIN-protected portal within the same app. This gateway filters out all pending requests, allowing the storekeeper to review requested quantities, verify physical stock, and execute approvals or rejections with mandatory reasoning.',
-        images: [rwGateway, rwApproval],
+        title: '3. How It Works',
+        desc: 'The form supports multiple items in one request, uses master data for clearer input, and shows the current status as the request moves through review. This makes it much easier to see what is pending, approved, or rejected.',
+        // images: [rwStatus],
       },
       {
-        title: '4. Automated Database Formatting',
-        desc: 'The backend Google Apps Script strictly parses and formats timestamp data and arrays before writing to the Google Sheets database. This eliminates auto-formatting issues and maintains a clean, export-ready log for supplier procurement.',
-        images: [rwDatabase],
+        title: '4. Warehouse Review',
+        desc: 'The warehouse side has a separate view for checking stock and approving or rejecting requests. Rejections can also include a reason, which helps keep the process more transparent and easier to follow up.',
+        // images: [rwGateway, rwApproval],
+      },
+      {
+        title: '5. What I Learned',
+        desc: 'This project taught me that a lot of process problems are not only about the system itself, but about how information moves between people. If the request path is unclear, the work becomes harder even when everyone is trying to do the right thing.',
+        // images: [rwDatabase],
       },
     ],
   },
+
   {
-    title: 'Daily Report System',
-    category: 'operations System',
-    stack: 'Google Sheets, Apps Script, Javascript',
-    desc: 'A digital daily reporting system built using Google Apps Script, designed to replace manual paper-based reports from each branch or outlet.',
+    title: 'Warehouse Input Ledger',
+    category: 'Workplace Project',
+    stack: 'Google Apps Script, HTML, CSS, JavaScript',
+    desc: 'Some warehouse records still started as physical documents. I built this ledger to make those inputs easier to record, search, verify, and prepare for ERP entry.',
     achievements: [
-      'Digitized paper-based reporting across multiple branches.',
-      'Centralized daily data collection into a single, real-time Google Sheets dashboard.',
-      'Eliminated physical document loss and accelerated daily reporting turnaround time.',
+      'Turns physical document inputs into searchable digital records.',
+      'Creates a structured way to log manual document entries before they are moved into ERP data.',
+      'Makes document history easier to search and review later.',
+      'Helps connect physical records with their digital follow-up more clearly.',
+    ],
+    walkthrough: [
+      {
+        title: '1. Starting Point',
+        desc: 'A lot of warehouse information still came from physical documents. The challenge was not only recording the data, but keeping it easy to trace later when the information had to be checked again.',
+        // images: [sheetsImg],
+      },
+      {
+        title: '2. The Approach',
+        desc: 'I created a simple digital ledger so document details could be entered in a more consistent format and stored in a way that was easier to review than scattered notes or paper records.',
+        // images: [sheetsImg],
+      },
+      {
+        title: '3. How It Works',
+        desc: 'Each entry can be searched and checked, which makes it easier to verify whether a document has already been processed and follow the record back to its source when needed.',
+        // images: [sheetsImg],
+      },
+      {
+        title: '4. What I Learned',
+        desc: 'This project reminded me that documentation is not just admin work. The quality of the record affects what happens next, whether the data is easy to trace, or whether people have to guess and dig through files again.',
+        // images: [sheetsImg],
+      },
     ],
   },
+
+  {
+    title: 'Warehouse Data Comparison & Audit Tool',
+    category: 'Workplace Project',
+    stack: 'Google Sheets, Google Apps Script',
+    desc: 'This project came from a need to compare records from two different sources and quickly identify differences that needed attention. It helped me check warehouse dispatch data against technician service records in a more structured way.',
+    achievements: [
+      'Compares two operational records and highlights variance for review.',
+      'Generates a comparison report instead of requiring every record to be checked manually.',
+      'Links differences back to the source transaction for easier investigation.',
+      'Collects negative variances into a follow-up report for review and evidence.',
+      'Supports an investigation workflow with photo evidence and document traceability.',
+    ],
+    walkthrough: [
+      {
+        title: '1. Starting Point',
+        desc: 'The workflow involved two data sources: TSV data from technician service records and BC data from warehouse dispatch records. The challenge was comparing them without losing track of the original transaction details.',
+        // images: [tsvImg, bcImg],
+      },
+      {
+        title: '2. The Approach',
+        desc: 'I built a script to prepare both data sources and compare them in one place. Instead of manually checking each row, the tool quickly points out the differences that deserve attention.',
+        // images: [compareImg],
+      },
+      {
+        title: '3. How It Works',
+        desc: 'The tool generates a comparison table and groups negative variances in a separate report so they can be reviewed more efficiently. From there, the source transaction can be traced back and checked in more detail.',
+        // images: [reportMinImg, trackingMinImg],
+      },
+      {
+        title: '4. Investigation Workflow',
+        desc: 'When a difference needs an explanation, the workflow can record the reason and attach supporting photo evidence. That made the review process more organized and easier to document.',
+        // images: [outomationImg],
+      },
+      {
+        title: '5. What I Learned',
+        desc: 'This project showed me that automation is useful not just because it saves time. It is also valuable when it helps people investigate a problem in a clearer and more traceable way.',
+      },
+    ],
+  },
+
   {
     title: 'Inventory Operational Dashboard',
-    category: 'Web App',
-    stack: 'Excel Macro VBA, Apps Script',
-    desc: 'An automated dashboard that records incoming and outgoing goods data to generate daily stock reports and support operational needs.',
+    category: 'Learning Project',
+    stack: 'Excel VBA, Google Apps Script',
+    desc: 'An early inventory project I built to explore how incoming and outgoing goods could be recorded digitally and turned into a simple stock report.',
     achievements: [
-      'Developed an automated data entry macro to speed up daily inventory logging.',
-      'Maintained strict data accuracy during monthly stock opname activities.',
-      'Generated instant daily stock reports to support fast operational decision-making.',
+      'Experimented with structured inbound and outbound inventory records.',
+      'Used automation to reduce repetitive data-entry steps.',
+      'Generated stock information from recorded transactions.',
+      'Used the project to learn more about inventory logic and spreadsheet automation.',
     ],
   },
+
   {
     title: 'Cash Flow Report Dashboard',
-    category: 'Web App',
-    stack: 'Google Sheets, Apps Script, Javascript',
-    desc: 'Automated cash administration processes to accelerate daily financial tracking and eliminate heavy reliance on manual spreadsheets.',
-    achievements: ['Automated daily data entry for seamless financial tracking and reporting.', 'Created a real-time visualization of cash flow accessible via cloud.', 'Reduced administrative bottlenecks in daily cash reconciliation.'],
+    category: 'Learning Project',
+    stack: 'Google Sheets, Google Apps Script, JavaScript',
+    desc: 'An experiment in organizing daily cash records and turning spreadsheet data into a simple reporting view.',
+    achievements: ['Experimented with structured daily cash data entry.', 'Created a centralized reporting view using Google Sheets.', 'Explored basic automation for repetitive reporting activities.'],
   },
+
   {
     title: 'Payroll Management System',
-    category: 'Microsoft App',
-    stack: 'Excel Macro VBA',
-    desc: 'A fully functional payroll and attendance management tool built entirely in Microsoft Excel, enhanced with VBA automation.',
+    category: 'Learning Project',
+    stack: 'Excel VBA',
+    desc: 'An Excel VBA project created to explore employee data, attendance records, and payroll calculations within a single workbook.',
     achievements: [
-      'Centralized employee data, timesheets, and payroll calculations in one integrated file.',
-      'Simplified HR and administrative tasks for small to medium-sized teams.',
-      'Eliminated manual calculation errors through robust VBA automation.',
+      'Organized employee and attendance information in one workbook.',
+      'Used VBA to automate repetitive payroll calculations.',
+      'Explored how administrative data can be connected across multiple worksheets.',
+      'Used the project to strengthen my understanding of Excel automation.',
     ],
   },
+
   {
-    title: 'Professional Web Portfolio',
-    category: 'Web Development',
+    title: 'Portfolio Website',
+    category: 'Web Project',
     stack: 'React, Tailwind CSS, JavaScript',
-    desc: 'A modern, responsive personal portfolio website built to showcase my professional background, operational projects, and technical skills.',
+    desc: 'A portfolio project I built to document my work, experiments, and career development as I keep learning and improving.',
     achievements: [
-      'Designed a clean, user-friendly interface to present complex operational projects effectively.',
-      'Implemented interactive modals and dynamic tabs using React state management.',
-      'Deployed and maintained the codebase on GitHub to ensure easy access for recruiters.',
+      'Built a responsive website using React and Tailwind CSS.',
+      'Created reusable sections to organize my work, projects, and background.',
+      'Used interactive tabs and project stories to present information in a clearer way.',
+      'Treated the site as a place to document my learning and progression over time.',
     ],
   },
 ];

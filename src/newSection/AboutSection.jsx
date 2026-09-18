@@ -10,9 +10,9 @@ const AboutSection = () => {
   return (
     <div className="space-y-8">
       <StoryBlock
-        eyebrow="Operational perspective"
-        title="The work is grounded in warehouse administration, process discipline, and practical problem-solving."
-        description="The focus is not only on building tools, but on understanding the business flow behind them and creating systems that people can actually use day to day."
+        eyebrow="ABOUT ME"
+        title="From hands-on operations to digital tools."
+        description="My background started in technical and logistics work before moving into warehouse administration. Along the way, I became interested in the small problems behind everyday work — how information is recorded, how requests move between people, and how simple digital tools can make those processes easier to manage."
       >
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-slate-50 p-2">
@@ -21,18 +21,24 @@ const AboutSection = () => {
           <div className="space-y-4">
             <div className="flex flex-wrap gap-3">
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700">
-                <BriefcaseBusiness size={16} className="text-sky-700" /> Warehouse administrator
+                <BriefcaseBusiness size={16} className="text-sky-700" /> Warehouse & Administration
               </div>
               <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700">
-                <Workflow size={16} className="text-sky-700" /> Process improvement focus
+                <Workflow size={16} className="text-sky-700" /> Digital Tools & Practical Automation
               </div>
             </div>
             <p className="text-sm leading-7 text-slate-600">
-              I work in environments where data quality, timing, and clear handoffs matter. That experience shaped a preference for simple systems that reduce rework, make exceptions visible, and help teams act with confidence.
+              I started with a technical background and then worked in logistics and warehouse operations before moving closer to the administrative side of warehouse work. In those roles, I learned how much daily work depends on
+              documentation, accuracy, coordination, and follow-up.
             </p>
-            <div className="grid gap-3 sm:grid-cols-2">
-              <InfoPill label="Current role" value="Warehouse Administrator" tone="accent" />
-              <InfoPill label="Core strength" value="Workflow and reporting" tone="default" />
+            <p className="text-sm leading-7 text-slate-600">
+              The more I worked in that environment, the more I became interested in the gap between operational work and the data that supports it. At the same time, I started using Excel, Google Sheets, Apps Script, and simple web tools
+              to make some of the repetitive tasks more structured and easier to manage.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <InfoPill label="BACKGROUND" value="Technical & Logistics" tone="accent" />
+              <InfoPill label="EXPERIENCE" value="Warehouse & Administration" tone="default" />
+              <InfoPill label="INTEREST" value="Digital Tools & Problem Solving" tone="success" />
             </div>
             <a
               href="https://drive.google.com/file/d/1O_nE2o03LsG9_EYpk9hIDTtW9efspyWU/view?usp=drive_link"
