@@ -33,11 +33,11 @@ const HomeSection = () => {
               structured way.
             </p>
             <div className="flex flex-wrap gap-3">
-              <button onClick={() => navigate('/projects')} className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700">
-                Explore the cases <ArrowRight size={16} />
+              <button onClick={() => navigate('/about')} className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700">
+                Read my journey <ArrowRight size={16} />
               </button>
-              <button onClick={() => navigate('/about')} className="rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100">
-                Read my journey
+              <button onClick={() => navigate('/projects')} className="rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-100">
+                Explore the cases
               </button>
             </div>
           </div>
