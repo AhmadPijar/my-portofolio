@@ -23,7 +23,7 @@ export const roadmapData = [
     future: false,
   },
   {
-    year: 'Sept 2023 - Sept 2025',
+    year: 'Apr 2023 - Mar 2025',
     title: 'Warehouse Staff',
     desc: 'PT Chargeurs PCC Indonesia',
     details: [
@@ -35,7 +35,7 @@ export const roadmapData = [
     future: false,
   },
   {
-    year: 'Nov 2025 - Dec 2025',
+    year: 'Mar 2025 - Apr 2025',
     title: 'Digital Office Administration Training',
     desc: 'BBPVP Bekasi',
     details: [
@@ -47,7 +47,7 @@ export const roadmapData = [
     future: false,
   },
   {
-    year: 'Jan 2026 - Sept 2026',
+    year: 'July 2025 - Sept 2026',
     title: 'Warehouse Admin',
     desc: 'Rentokil Initial - Metro East Branch, Jakarta',
     details: [
@@ -59,16 +59,16 @@ export const roadmapData = [
     current: false,
     future: false,
   },
-  {
-    year: '',
-    title: 'Other Experience',
-    desc: 'Short-term & Part-time Roles',
-    details: [
-      'Production Operator — PT Sinar Masking Lestari\nI handled production tasks, quality checking, and packaging work in a fast-paced manufacturing setting.',
-      'Barista — Bliss Social Space\nI managed beverage preparation, stock handling, cash transactions, and customer service in a service-based environment.',
-      'Computer Store Staff — Virago Technicom\nI assisted customers, organized product displays, checked stock availability, and prepared simple daily operational reports.',
-    ],
-    current: false,
-    future: false,
-  },
+  // {
+  //   year: '',
+  //   title: 'Other Experience',
+  //   desc: 'Short-term & Part-time Roles',
+  //   details: [
+  //     'Production Operator — PT Sinar Masking Lestari\nI handled production tasks, quality checking, and packaging work in a fast-paced manufacturing setting.',
+  //     'Barista — Bliss Social Space\nI managed beverage preparation, stock handling, cash transactions, and customer service in a service-based environment.',
+  //     'Computer Store Staff — Virago Technicom\nI assisted customers, organized product displays, checked stock availability, and prepared simple daily operational reports.',
+  //   ],
+  //   current: false,
+  //   future: false,
+  // },
 ];
